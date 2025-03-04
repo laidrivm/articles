@@ -1,0 +1,25 @@
+name: Download Markdown Images
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  download-markdown-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: |
+          bun init -y
+
+      - name: Download Images and Update Markdown
+        run: bun run process-markdown-images.js
