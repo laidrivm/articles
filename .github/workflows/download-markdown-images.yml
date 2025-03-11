@@ -28,3 +28,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ secrets.REPOSITORY }}
           GITHUB_REF: ${{ secrets.REF }}
+
+      - name: Push Processed Files
+        run: |
+          git add .
+          git commit -m "update image links from external to local"
+          git push
