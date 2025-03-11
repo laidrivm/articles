@@ -108,8 +108,9 @@ async function processMarkdownFile(filePath, rootDir) {
   if (hasChanges) {
     await Bun.write(filePath, updatedContent);
     console.log(`Updated ${filePath}`);
+    
     return {
-      path: filePath,
+      path: filePath.replace(/\\/g, '/').replace(/^\/?/, ''), // Normalize path for GitHub API
       content: updatedContent
     };
   }
@@ -143,7 +144,7 @@ async function findMarkdownFiles(dir, rootDir, files = []) {
   }
 }
 
-async function commitAndPushChanges(changedFiles) {
+async function commitChangesToGitHub(changedFiles) {
   // Get GitHub environment variables
   const token = process.env.GITHUB_TOKEN;
   const repository = process.env.GITHUB_REPOSITORY;
@@ -164,74 +165,53 @@ async function commitAndPushChanges(changedFiles) {
   });
   
   try {
-    // Get the latest commit SHA
-    const { data: refData } = await octokit.git.getRef({
-      owner,
-      repo,
-      ref: `heads/${branch}`
-    });
-    
-    const latestCommitSha = refData.object.sha;
-    
-    // Get the base tree
-    const { data: commitData } = await octokit.git.getCommit({
-      owner,
-      repo,
-      commit_sha: latestCommitSha
-    });
-    
-    const baseTreeSha = commitData.tree.sha;
-    
-    // Create blobs for each changed file
-    const fileBlobs = await Promise.all(
-      changedFiles.map(async (file) => {
-        const { data } = await octokit.git.createBlob({
-          owner,
-          repo,
-          content: Buffer.from(file.content).toString('base64'),
-          encoding: 'base64'
-        });
-        
-        return {
-          path: file.path.replace(/\\/g, '/').replace(/^\/?/, ''), // Normalize path
-          mode: '100644',
-          type: 'blob',
-          sha: data.sha
-        };
-      })
-    );
-    
-    if (fileBlobs.length === 0) {
+    if (changedFiles.length === 0) {
       console.log('No changes to commit.');
       return;
     }
     
-    // Create a new tree
-    const { data: newTree } = await octokit.git.createTree({
-      owner,
-      repo,
-      base_tree: baseTreeSha,
-      tree: fileBlobs
-    });
+    // Create a commit with multiple file changes
+    // We'll use the contents API instead of the Git Data API
+    for (const file of changedFiles) {
+      console.log(`Committing changes to ${file.path}`);
+      
+      try {
+        // First, try to get the file to check if it exists and get its SHA
+        let fileSha;
+        try {
+          const { data: fileData } = await octokit.repos.getContent({
+            owner,
+            repo,
+            path: file.path,
+            ref: branch
+          });
+          fileSha = fileData.sha;
+          console.log(`Found existing file ${file.path} with SHA: ${fileSha}`);
+        } catch (error) {
+          // File might not exist yet
+          console.log(`File ${file.path} doesn't exist yet or couldn't be fetched`);
+          fileSha = undefined;
+        }
+        
+        // Update or create the file
+        const { data } = await octokit.repos.createOrUpdateFileContents({
+          owner,
+          repo,
+          path: file.path,
+          message: 'update image links from external to local',
+          content: Buffer.from(file.content).toString('base64'),
+          branch,
+          sha: fileSha // Include SHA if the file exists, omit if it's a new file
+        });
+        
+        console.log(`Successfully updated ${file.path}: ${data.commit.html_url}`);
+      } catch (error) {
+        console.error(`Error updating file ${file.path}:`, error.message);
+        throw error;
+      }
+    }
     
-    // Create a new commit
-    const { data: newCommit } = await octokit.git.createCommit({
-      owner,
-      repo,
-      message: 'update image links from external to local',
-      tree: newTree.sha,
-      parents: [latestCommitSha]
-    });
-    
-    // Update the reference
-    await octokit.git.updateRef({
-      owner,
-      repo,
-      ref: `heads/${branch}`,
-      sha: newCommit.sha
-    });
-    
-    console.log(`Successfully committed changes with SHA: ${newCommit.sha}`);
+    console.log('All files updated successfully');
   } catch (error) {
     console.error('Error with GitHub API:', error.message);
     throw error;
@@ -255,7 +235,7 @@ async function main() {
   
   if (changedFiles.length > 0) {
     console.log(`Processed ${changedFiles.length} files with changes. Committing to repository...`);
-    await commitAndPushChanges(changedFiles);
+    await commitChangesToGitHub(changedFiles);
   } else {
     console.log('No changes were made to any files. Skipping commit.');
   }
