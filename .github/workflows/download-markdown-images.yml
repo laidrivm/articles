@@ -20,6 +20,11 @@ jobs:
       - name: Install dependencies
         run: |
           bun init -y
+          bun add @octokit/rest
 
       - name: Download Images and Update Markdown
         run: bun run process-markdown-images.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ secrets.REPOSITORY }}
+          GITHUB_REF: ${{ secrets.REF }}
