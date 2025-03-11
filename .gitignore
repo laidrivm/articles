@@ -1,2 +1,7 @@
 .cache
 .DS_Store
+node_modules/
+bun.lock
+package.json
+tsconfig.json
+.env
