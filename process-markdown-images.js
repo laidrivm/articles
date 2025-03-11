@@ -125,7 +125,7 @@ async function findMarkdownFiles(dir, rootDir, files = []) {
       const fullPath = join(dir, entry.name);
       
       if (entry.isDirectory()) {
-        if (entry.name === '.git' || entry.name === 'node_modules') continue;
+        if (entry.name === '.git' || entry.name === '.node_modules') continue;
         
         // Recursively process subdirectories
         await findMarkdownFiles(fullPath, rootDir, files);
