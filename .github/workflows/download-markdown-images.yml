@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Install Bun
         uses: oven-sh/setup-bun@v2
@@ -24,13 +26,11 @@ jobs:
 
       - name: Download Images and Update Markdown
         run: bun run process-markdown-images.js
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ secrets.REPOSITORY }}
-          GITHUB_REF: ${{ secrets.REF }}
 
       - name: Push Processed Files
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email {user.id}+{user.login}@users.noreply.github.com
           git add .
           git commit -m "update image links from external to local"
           git push
