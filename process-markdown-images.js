@@ -1,6 +1,5 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
-import { dirname, join, basename, parse, relative } from 'path';
-import { glob } from 'glob';
+import { dirname, join, basename, parse, relative, extname } from 'path';
+import { readdir, mkdir } from 'node:fs/promises';
 
 function extractImageReferences(content) {
   const regex = /!\[((?:[^\[\]]|\[(?:[^\[\]]|\[(?:[^\[\]])*\])*\])*?)\]\((https?:\/\/[^\s)]+)\)/g;
@@ -44,16 +43,15 @@ async function downloadImage(url, savePath) {
       console.log(`Skipping: ${url} - Not an image (${contentType})`);
       return false;
     }
-    
-    const arrayBuffer = await response.arrayBuffer();
-    const buffer = Buffer.from(arrayBuffer);
-    
+
     const dir = dirname(savePath);
-    if (!existsSync(dir)) {
-      mkdirSync(dir, { recursive: true });
+    const dirFile = Bun.file(dir);
+    const dirExists = await dirFile.exists();
+    if (!dirExists) {
+      await mkdir(dir, { recursive: true });
     }
-    
-    writeFileSync(savePath, buffer);
+
+    await Bun.write(savePath, response);
     console.log(`Saved to: ${savePath}`);
     return true;
   } catch (error) {
@@ -65,34 +63,38 @@ async function downloadImage(url, savePath) {
 async function processMarkdownFile(filePath, rootDir) {
   console.log(`Processing file: ${filePath}`);
 
-  const content = readFileSync(filePath, 'utf-8');
+  const file = Bun.file(filePath);
+  const fileExists = await file.exists();
+  if (!fileExists) {
+    console.log(`File does not exist: ${filePath}`);
+    return;
+  }
   
+  const content = await file.text();
   const imageReferences = extractImageReferences(content);
-  
   if (imageReferences.length === 0) {
     console.log(`No external images found in ${filePath}`);
     return;
   }
   
   console.log(`Found ${imageReferences.length} external images in ${filePath}`);
-  
+
   const fileDir = dirname(filePath);
   const fileBaseName = parse(filePath).name;
   const imageSubDir = join(fileDir, fileBaseName);
   
   let updatedContent = content;
   
-  for (const reference of imageReferences) {
+for (const reference of imageReferences) {
     const { fullMatch, altText, imageUrl } = reference;
     const imageFileName = basename(imageUrl);
     const savePath = join(imageSubDir, imageFileName);
-    const success = await downloadImage(imageUrl, savePath);
     
+    const success = await downloadImage(imageUrl, savePath);
     if (success) {
       const relativeImagePath = `/${relative(rootDir, savePath).replace(/\\/g, '/')}`;
       const newImageReference = `![${altText}](${relativeImagePath})`;
-
-      // We need to escape special regex characters in the fullMatch
+      // Escape special regex characters in the fullMatch
       const escapedFullMatch = fullMatch.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       updatedContent = updatedContent.replace(new RegExp(escapedFullMatch, 'g'), newImageReference);
       
@@ -100,21 +102,42 @@ async function processMarkdownFile(filePath, rootDir) {
     }
   }
 
-  // Write the updated content back to the file
-  writeFileSync(filePath, updatedContent, 'utf-8');
+  await Bun.write(filePath, updatedContent);
   console.log(`Updated ${filePath}`);
+}
+
+async function findMarkdownFiles(dir, rootDir, files = []) {
+  try {
+    const entries = await readdir(dir, { withFileTypes: true });
+    
+    for (const entry of entries) {
+      const fullPath = join(dir, entry.name);
+      
+      if (entry.isDirectory()) {
+        if (entry.name === '.git') continue;
+        
+        // Recursively process subdirectories
+        await findMarkdownFiles(fullPath, rootDir, files);
+      } else if (entry.isFile() && 
+                extname(entry.name).toLowerCase() === '.md' && 
+                entry.name !== 'README.md') {
+        files.push(fullPath);
+      }
+    }
+    
+    return files;
+  } catch (error) {
+    console.error(`Error reading directory ${dir}:`, error.message);
+    return files;
+  }
 }
 
 async function main() {
   const rootDir = process.cwd();
-  const markdownFiles = glob.sync('**/*.md', {
-    cwd: rootDir,
-    ignore: ['**/README.md', '**/.git/**'],
-    absolute: true
-  });
+  const markdownFiles = await findMarkdownFiles(rootDir, rootDir);
   
   console.log(`Found ${markdownFiles.length} markdown files to process`);
-
+  
   for (const filePath of markdownFiles) {
     await processMarkdownFile(filePath, rootDir);
   }
