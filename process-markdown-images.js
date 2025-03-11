@@ -1,91 +1,128 @@
-import {readdir, stat} from 'node:fs/promises'
-import path from 'path'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
+import { dirname, join, basename, parse, relative } from 'path';
+import { glob } from 'glob';
 
-function findExternalImages(content) {
-  const imageRegex = /!\[([^\]]*)\]\((https?:\/\/[^\s)]+)\)/g
-  const externalImages = []
-  
+function extractImageReferences(content) {
+  const regex = /!\[((?:[^\[\]]|\[(?:[^\[\]]|\[(?:[^\[\]])*\])*\])*?)\]\((https?:\/\/[^\s)]+)\)/g;
+  const matches = [];
   let match;
-  while ((match = imageRegex.exec(content)) !== null) {
-    externalImages.push({
+
+  while ((match = regex.exec(content)) !== null) {
+    matches.push({
       fullMatch: match[0],
       altText: match[1],
-      href: match[2]
+      imageUrl: match[2]
     });
   }
+
+  return matches;
+}
+
+async function downloadImage(url, savePath) {
+  try {
+    // Skip URLs that are clearly not image files
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.svg', '.webp', '.bmp', '.ico'];
+    const urlLower = url.toLowerCase();
+    
+    if (!imageExtensions.some(ext => urlLower.includes(ext)) && 
+        !urlLower.includes('/image') && !urlLower.includes('/img') && 
+        !urlLower.includes('postimg') && !urlLower.includes('cdn-images')) {
+      console.log(`Skipping non-image URL: ${url}`);
+      return false;
+    }
+    
+    console.log(`Downloading: ${url}`);
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`Failed to download image: ${response.status} ${response.statusText}`);
+    }
+    
+    // Check content type to ensure it's an image
+    const contentType = response.headers.get('content-type');
+    if (!contentType || !contentType.startsWith('image/')) {
+      console.log(`Skipping: ${url} - Not an image (${contentType})`);
+      return false;
+    }
+    
+    const arrayBuffer = await response.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
+    
+    const dir = dirname(savePath);
+    if (!existsSync(dir)) {
+      mkdirSync(dir, { recursive: true });
+    }
+    
+    writeFileSync(savePath, buffer);
+    console.log(`Saved to: ${savePath}`);
+    return true;
+  } catch (error) {
+    console.error(`Error downloading image ${url}:`, error.message);
+    return false;
+  }
+}
+
+async function processMarkdownFile(filePath, rootDir) {
+  console.log(`Processing file: ${filePath}`);
+
+  const content = readFileSync(filePath, 'utf-8');
   
-  return externalImages;
-}
-
-async function processMarkdownFiles() {
-  const rootDir = Bun.main.replace(/\/[^/]+$/, '')
-
-  async function processFile(filePath) {
-    if (Bun.file(filePath).name === 'README.md') return
+  const imageReferences = extractImageReferences(content);
+  
+  if (imageReferences.length === 0) {
+    console.log(`No external images found in ${filePath}`);
+    return;
+  }
+  
+  console.log(`Found ${imageReferences.length} external images in ${filePath}`);
+  
+  const fileDir = dirname(filePath);
+  const fileBaseName = parse(filePath).name;
+  const imageSubDir = join(fileDir, fileBaseName);
+  
+  let updatedContent = content;
+  
+  for (const reference of imageReferences) {
+    const { fullMatch, altText, imageUrl } = reference;
+    const imageFileName = basename(imageUrl);
+    const savePath = join(imageSubDir, imageFileName);
+    const success = await downloadImage(imageUrl, savePath);
     
-    const fileContent = await Bun.file(filePath).text()
-    
-    const externalImages = findExternalImages(fileContent)
-    console.log(externalImages)
+    if (success) {
+      const relativeImagePath = `/${relative(rootDir, savePath).replace(/\\/g, '/')}`;
+      const newImageReference = `![${altText}](${relativeImagePath})`;
 
-    let updatedContent = fileContent
-    const imageDownloadPromises = []
-    
-    for (const image of externalImages) {
-      const fileNameDir = Bun.file(filePath).name.replace('.md', '')
+      // We need to escape special regex characters in the fullMatch
+      const escapedFullMatch = fullMatch.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      updatedContent = updatedContent.replace(new RegExp(escapedFullMatch, 'g'), newImageReference);
       
-      try {
-        Bun.mkdirSync(fileNameDir, {recursive: true})
-      } catch (err) {
-        console.log(fileNameDir + ' already exists')
-      }
-
-      const fileName = path.basename(image.href)
-      const localImagePath = path.join(fileNameDir, fileName)
-      const relativeImagePath = path.join(fileNameDir.split(path.sep).pop(), fileName)
-      
-      const downloadPromise = fetch(image.href)
-        .then(async response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`)
-          }
-          const arrayBuffer = await response.arrayBuffer()
-          Bun.write(localImagePath, arrayBuffer)
-          
-          updatedContent = updatedContent.replace(
-            image.fullMatch,
-            `![${image.altText}](/${relativeImagePath})`
-          )
-        })
-        .catch(error => {
-          console.error(`Error downloading ${image.href}:`, error)
-        })
-      
-      imageDownloadPromises.push(downloadPromise)
-    }
-    await Promise.all(imageDownloadPromises)
-    
-    if (imageDownloadPromises.length > 0) {
-      await Bun.write(filePath, updatedContent)
+      console.log(`Updated reference: ${fullMatch} -> ${newImageReference}`);
     }
   }
 
-  async function processDir(dir) {
-    const files = await readdir(dir)
-    
-    for (const file of files) {
-      const filePath = path.join(dir, file)
-      const fileStat = await stat(filePath)
-      
-      if (fileStat.isDirectory()) {
-        await processDir(filePath)
-      } else if (file.endsWith('.md')) {
-        await processFile(filePath)
-      }
-    }
-  }
-
-  await processDir(rootDir)
+  // Write the updated content back to the file
+  writeFileSync(filePath, updatedContent, 'utf-8');
+  console.log(`Updated ${filePath}`);
 }
 
-processMarkdownFiles().catch(console.error)
+async function main() {
+  const rootDir = process.cwd();
+  const markdownFiles = glob.sync('**/*.md', {
+    cwd: rootDir,
+    ignore: ['**/README.md', '**/.git/**'],
+    absolute: true
+  });
+  
+  console.log(`Found ${markdownFiles.length} markdown files to process`);
+
+  for (const filePath of markdownFiles) {
+    await processMarkdownFile(filePath, rootDir);
+  }
+  
+  console.log('Processing complete');
+}
+
+main().catch(error => {
+  console.error('Error:', error);
+  process.exit(1);
+});
