@@ -1,6 +1,5 @@
 import { dirname, join, basename, parse, relative, extname } from 'path';
 import { readdir, mkdir } from 'node:fs/promises';
-import { Octokit } from '@octokit/rest';
 
 function extractImageReferences(content) {
   const regex = /!\[((?:[^\[\]]|\[(?:[^\[\]]|\[(?:[^\[\]])*\])*\])*?)\]\((https?:\/\/[^\s)]+)\)/g;
@@ -68,14 +67,14 @@ async function processMarkdownFile(filePath, rootDir) {
   const fileExists = await file.exists();
   if (!fileExists) {
     console.log(`File does not exist: ${filePath}`);
-    return false;
+    return;
   }
   
   const content = await file.text();
   const imageReferences = extractImageReferences(content);
   if (imageReferences.length === 0) {
     console.log(`No external images found in ${filePath}`);
-    return false;
+    return;
   }
   
   console.log(`Found ${imageReferences.length} external images in ${filePath}`);
@@ -85,9 +84,8 @@ async function processMarkdownFile(filePath, rootDir) {
   const imageSubDir = join(fileDir, fileBaseName);
   
   let updatedContent = content;
-  let hasChanges = false;
   
-  for (const reference of imageReferences) {
+for (const reference of imageReferences) {
     const { fullMatch, altText, imageUrl } = reference;
     const imageFileName = basename(imageUrl);
     const savePath = join(imageSubDir, imageFileName);
@@ -101,20 +99,11 @@ async function processMarkdownFile(filePath, rootDir) {
       updatedContent = updatedContent.replace(new RegExp(escapedFullMatch, 'g'), newImageReference);
       
       console.log(`Updated reference: ${fullMatch} -> ${newImageReference}`);
-      hasChanges = true;
     }
   }
 
-  if (hasChanges) {
-    await Bun.write(filePath, updatedContent);
-    console.log(`Updated ${filePath}`);
-    return {
-      path: filePath,
-      content: updatedContent
-    };
-  }
-  
-  return null;
+  await Bun.write(filePath, updatedContent);
+  console.log(`Updated ${filePath}`);
 }
 
 async function findMarkdownFiles(dir, rootDir, files = []) {
@@ -143,114 +132,14 @@ async function findMarkdownFiles(dir, rootDir, files = []) {
   }
 }
 
-async function commitAndPushChanges(changedFiles) {
-  const token = process.env.GITHUB_TOKEN;
-  const repository = process.env.GITHUB_REPOSITORY;
-  const ref = process.env.GITHUB_REF;
-  
-  if (!token || !repository || !ref) {
-    throw new Error('Missing required GitHub environment variables. Make sure GITHUB_TOKEN is set in your workflow.');
-  }
-  
-  const [owner, repo] = repository.split('/');
-  const branch = ref.replace('refs/heads/', '');
-  
-  console.log(`Repository: ${owner}/${repo}, Branch: ${branch}`);
-  
-  const octokit = new Octokit({
-    auth: token
-  });
-  
-  try {
-    const { data: refData } = await octokit.git.getRef({
-      owner,
-      repo,
-      ref: `heads/${branch}`
-    });
-    
-    const latestCommitSha = refData.object.sha;
-    
-    const { data: commitData } = await octokit.git.getCommit({
-      owner,
-      repo,
-      commit_sha: latestCommitSha
-    });
-    
-    const baseTreeSha = commitData.tree.sha;
-    
-    // Create blobs for each changed file
-    const fileBlobs = await Promise.all(
-      changedFiles.map(async (file) => {
-        const { data } = await octokit.git.createBlob({
-          owner,
-          repo,
-          content: Buffer.from(file.content).toString('base64'),
-          encoding: 'base64'
-        });
-        
-        return {
-          path: file.path.replace(/\\/g, '/').replace(/^\/?/, ''), // Normalize path
-          mode: '100644',
-          type: 'blob',
-          sha: data.sha
-        };
-      })
-    );
-    
-    if (fileBlobs.length === 0) {
-      console.log('No changes to commit.');
-      return;
-    }
-    
-    const { data: newTree } = await octokit.git.createTree({
-      owner,
-      repo,
-      base_tree: baseTreeSha,
-      tree: fileBlobs
-    });
-    
-    const { data: newCommit } = await octokit.git.createCommit({
-      owner,
-      repo,
-      message: 'update image links from external to local',
-      tree: newTree.sha,
-      parents: [latestCommitSha]
-    });
-    
-    await octokit.git.updateRef({
-      owner,
-      repo,
-      ref: `heads/${branch}`,
-      sha: newCommit.sha
-    });
-    
-    console.log(`Successfully committed changes with SHA: ${newCommit.sha}`);
-  } catch (error) {
-    console.error('Error with GitHub API:', error.message);
-    throw error;
-  }
-}
-
 async function main() {
   const rootDir = process.cwd();
   const markdownFiles = await findMarkdownFiles(rootDir, rootDir);
   
   console.log(`Found ${markdownFiles.length} markdown files to process`);
   
-  const changedFiles = [];
-  
   for (const filePath of markdownFiles) {
-    const fileChange = await processMarkdownFile(filePath, rootDir);
-    if (fileChange) {
-      changedFiles.push(fileChange);
-    }
-  }
-  
-  if (changedFiles.length > 0) {
-    console.log(`Processed ${changedFiles.length} files with changes. Committing to repository...`);
-    await commitAndPushChanges(changedFiles);
-  } else {
-    console.log('No changes were made to any files. Skipping commit.');
+    await processMarkdownFile(filePath, rootDir);
   }
   
   console.log('Processing complete');
