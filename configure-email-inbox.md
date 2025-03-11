@@ -1,4 +1,4 @@
-![Screenshot of my empty Gmail inbox](https://cdn-images-1.medium.com/max/1600/1*YRZAcVFJaArnLEcQo498BA.png)
+![Screenshot of my empty Gmail inbox](/configure-email-inbox/1*YRZAcVFJaArnLEcQo498BA.png)
 
 # How to configure and use an email inbox
 
@@ -70,7 +70,7 @@ Now, let’s take a look into Gmail settings. Most of them work well by default,
 
 ### Quick settings
 
-![Gmail quick settings screenshot](https://cdn-images-1.medium.com/max/1600/1*hxqqogSmXNUk6qzTL32qqg.png)
+![Gmail quick settings screenshot](/configure-email-inbox/1*hxqqogSmXNUk6qzTL32qqg.png)
 
 Start by opening the quick settings via the gear icon:
 
@@ -123,11 +123,11 @@ In work email, I mostly create labels by source and sometimes by long-term proje
 
 Filters help you automatically get rid of emails, which are hard to unsubscribe from, or sort emails into folders. Create a new filter in [Settings → Filters and blocked addresses](https://mail.google.com/mail/u/0/#settings/filters) or directly in the search bar:
 
-![Screenshot on how to create a filter from a searchbar](https://cdn-images-1.medium.com/max/1600/1*oNv0OQ3zRB2a5rMGkhbvmQ.png)
+![Screenshot on how to create a filter from a searchbar](/configure-email-inbox/1*oNv0OQ3zRB2a5rMGkhbvmQ.png)
 
 Or in an email of the type you’d like to filter:
 
-![Screenshot on how to add filter from an exact email](https://cdn-images-1.medium.com/max/1600/1*uuTjquf7HQtqg-CWUIP09A.png)
+![Screenshot on how to add filter from an exact email](/configure-email-inbox/1*uuTjquf7HQtqg-CWUIP09A.png)
 
 You can filter emails by sender, recipient, keywords, size, and attachments. If needed, filter by multiple criteria.
 

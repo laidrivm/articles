@@ -1,5 +1,5 @@
 
-![Screenshot of the list with the positions I published last year](https://cdn-images-1.medium.com/max/2400/1*ZBs7dlM7eJD3StbrQh4y-A.png)
+![Screenshot of the list with the positions I published last year](/write-vacancies/1*ZBs7dlM7eJD3StbrQh4y-A.png)
 
 # Guide: how to write job openings
 
@@ -15,7 +15,7 @@ There are usually two situations when I open a position: replacing an employee o
 
 Here’s an example of a position I opened at [Emerging Travel Group](https://www.emergingtravel.com/career/). I agreed with other managers that we’re forming a new team. The products I was responsible for were blocked by external dependencies. They were developed slower than desired, it bothered products. My teams couldn’t pick up this work without dropping one of their own — where they were experts. When we discussed this, I created and approved a vision of how it should work:
 
-![A workflow diagram describing the proccesses of a new team from the example](https://cdn-images-1.medium.com/max/2600/1*oziK1iXfOq3ifYafcoW7PQ.png)
+![A workflow diagram describing the proccesses of a new team from the example](/write-vacancies/1*oziK1iXfOq3ifYafcoW7PQ.png)
 
 To define the need and position details, try to create a diagram, where the elements are the required positions. It might be org. chart, workflow or something mixed with systems design scheme
 
@@ -117,7 +117,7 @@ I’ve already discovered and wrote down the main content. Now I’ll sum it up 
 I never publish the first draft. This is a sort of canvas which confuses myself. I will iteratively improve it: set the structure, move paragraphs to each other according to their meaning, rewrite strange places and reveal what remains abstract. After that, I’ll get something like:
 
 > **Job opening. Systems Analyst in a Travel Tech CRM, Remote**
->![CRM screenshot](https://cdn-images-1.medium.com/max/1600/1*B1BqNTDaLWAXdvABmJq6Ew.png)
+>![CRM screenshot](/write-vacancies/1*B1BqNTDaLWAXdvABmJq6Ew.png)
 >
 > Hey!
 >
@@ -136,7 +136,7 @@ I never publish the first draft. This is a sort of canvas which confuses myself.
 >  — Unblock the Delivery phase if there arise any issues related to requirements or agreements between stakeholders.
 >
 > **Technologies**
->![Gitlab screenshot revealing project’s structure](https://cdn-images-1.medium.com/max/1600/1*lw8IN9Uak_w8P_whW0NvwQ.png)
+>![Gitlab screenshot revealing project’s structure](/write-vacancies/1*lw8IN9Uak_w8P_whW0NvwQ.png)
 >
 > CRM is a Django application maintained by several teams. Although our monolith is 9 years old, we do not consider it as a legacy. We have a streamlined repository structure with shared utilities and applications for each integration. We write unit tests and are starting with integration tests. We automated our pipelines to release multiple times a week without any issues. The main challenge is the amount of docs, the number and depth of business domains we deal with.
 >
@@ -214,7 +214,7 @@ We could find ourselves in a situation where a manager tells us, “I’ve got t
 
 If the recruiter asks for a description, we could copy-paste someone else’s or ask ChatGPT. Don’t candidates already know what engineers are supposed to do?
 
-![Screenshot of a stock job opening description](https://cdn-images-1.medium.com/max/2400/1*18INGPYveiA_uGdSOL4XLw.png)
+![Screenshot of a stock job opening description](/write-vacancies/1*18INGPYveiA_uGdSOL4XLw.png)
 
 I guess you’ve got the idea
 
@@ -245,7 +245,7 @@ The person who wrote this might know the answers to all these questions. But it�
 
 Understandable if this thought crossed your mind after the example. To address this, let’s look at the hiring funnel and vacancy resizing.
 
-![Hiring funnel, where 100 applicants convert to 2 accepted offers](https://cdn-images-1.medium.com/max/1600/1*dD24qftwtW0k45quFgOcgQ.png)
+![Hiring funnel, where 100 applicants convert to 2 accepted offers](/write-vacancies/1*dD24qftwtW0k45quFgOcgQ.png)
 
 The funnel — a model that visualises the hiring process
 

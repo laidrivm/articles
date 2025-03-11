@@ -1,4 +1,4 @@
-![AI generated photo of a table with themed items](https://i.postimg.cc/jqySFFy8/free-durov-2.jpg)
+![AI generated photo of a table with themed items](/ru/free-durov/free-durov-2.jpg)
 
 # О задержании Дурова
 
@@ -71,7 +71,7 @@
 
 Итак, взаимосвязь функциональности Secret Chat от отображения экранов до шифрования сообщений:
 
-![Схема элементов Телеграм-клиента для iOS](https://hubo.dev/assets/tg-ios/part-4-network_modules.svg)
+![Схема элементов Телеграм-клиента для iOS](/ru/free-durov/part-4-network_modules.svg)
 
 Схему подрезал [из статьи 2020 года](https://hubo.dev/2020-06-05-source-code-walkthrough-of-telegram-ios-part-4/), но если свериться [с текущей версией клиента](https://github.com/TelegramMessenger/Telegram-iOS) — похоже на правду. Что ещё можно сказать о коде, кроме того, что он сложный:
 

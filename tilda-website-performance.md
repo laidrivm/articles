@@ -16,11 +16,11 @@ I will explain these steps in detail, how the migration scheme might look, and w
 
 I suggested starting with implementing all the recommendations from [the official guide](https://help.tilda.cc/website-speed). It turned out that the company had already implemented a most of them, but they were still unsatisfied with the results:
 
-![Screenshot from PageSpeed Insights](https://cdn-images-1.medium.com/max/1600/1*lhzejvVOY4xXkiBmU5_Arg.png)
+![Screenshot from PageSpeed Insights](/tilda-website-performance/1*lhzejvVOY4xXkiBmU5_Arg.png)
 
 To make the results more accurate, it is worth measuring the performance from the the target region network
 
-![Screenshot from PageSpeed Insights with Web Vitals Metrics](https://cdn-images-1.medium.com/max/1600/1*Q_DPTkzfamU9SO7hw1iiCg.png)
+![Screenshot from PageSpeed Insights with Web Vitals Metrics](/tilda-website-performance/1*Q_DPTkzfamU9SO7hw1iiCg.png)
 
 The values of user metrics appear even less satisfactory than the final score
 
@@ -47,11 +47,11 @@ Was needed something that would serve pages instead of Tilda. I recommended Clou
 
 Manually transferring a couple of pages from Tilda is possible, while mass export can be organized using handwritten scripts that use the Tilda API, Cloudflare API, and webhooks. These scripts can be hosted on a virtual machine. The company already has one, which was acquired along with the blog from outsorce developers. It can be schematically represented as follows:
 
-![Scheme of the original state of the company’s services](https://cdn-images-1.medium.com/max/1600/1*62FoDnXiHMk2L7Dlojx8gQ.png)
+![Scheme of the original state of the company’s services](/tilda-website-performance/1*62FoDnXiHMk2L7Dlojx8gQ.png)
 
 On the left — current state of the project. On the right — after migrating the first landing pages to Cloudflare
 
-![Screenshot from PageSpeed Insights after transferring first landing to Cloudflare](https://cdn-images-1.medium.com/max/1600/1*1rPA7sxw-SJD8Z4lAMMZ6g.png)
+![Screenshot from PageSpeed Insights after transferring first landing to Cloudflare](/tilda-website-performance/1*1rPA7sxw-SJD8Z4lAMMZ6g.png)
 
 Metrics of the test landing page after migration
 
@@ -67,7 +67,7 @@ The problems we still have:
 
 The next step here could be to redelegate the domain and switch to Cloudflare DNS. We will utilize more of the offered ecosystem and eliminate one external service. Additionally, we can use the Load Balancer, also provided by Cloudflare, to add another caching layer for Tilda pages and the blog hosted on a virtual machine in Singapore:
 
-![The scheme after migration to Cloudflate DNS and usage of the Load Balancer](https://cdn-images-1.medium.com/max/1600/1*YRzTv_DkJYbXWWDbNZ-GAA.png)
+![The scheme after migration to Cloudflate DNS and usage of the Load Balancer](/tilda-website-performance/1*YRzTv_DkJYbXWWDbNZ-GAA.png)
 
 The most challenging stage. We’re going to make it simple with the further steps
 
@@ -78,7 +78,7 @@ Now let’s solve the Tilda CDN issues. Its’ servers are still distant, and we
 
 However, now we will also have to replace the addresses on the pages from [static.tildacdn.cc](http://static.tildacdn.cc/) and [neo.tildacdn.cc](http://neo.tildacdn.cc/) to our own cdn.domain.com, which requires import scripts to run through the entire HTML markup.
 
-![The scheme after getting rid of Tilda CDN](https://cdn-images-1.medium.com/max/1600/1*pme34BD2egbiVmguy_zPoA.png)
+![The scheme after getting rid of Tilda CDN](/tilda-website-performance/1*pme34BD2egbiVmguy_zPoA.png)
 
 Tilda Engine still uploads assets to its’ CDN, but the company’s website use the version from Cloudflare CDN
 
@@ -88,7 +88,7 @@ We still haven’t handle a requirement to use a single domain fot the most of t
 
 The blog is built with Next.js, a framework that allows rendering site pages [in static generation mode](https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation). This means that the HTML markup of the page is generated while we build an application, after which it can be cached on a CDN. This approach works well for blog pages. If all blog pages are rendered with data and cached, user requests will no longer hit the virtual machine. This will allow us to remove the load balancer from that machine.
 
-![The scheme where we turn on SSG-mode on the blog app](https://cdn-images-1.medium.com/max/1600/1*pJ026A7sAgOSC7zk3wpCjg.png)
+![The scheme where we turn on SSG-mode on the blog app](/tilda-website-performance/1*pJ026A7sAgOSC7zk3wpCjg.png)
 
 Redirecting traffic from the blog VM. We can remove the local load balancer. But we can also keep it if there are requests for dynamic content.
 
@@ -100,7 +100,7 @@ Now let’s talk about optimization and content update of Tilda pages. What opti
 
 I suggested using Gatsby as the rendering engine. It is a framework designed for SSG, and it has a [ready-to-use plugin for working with Tilda](https://www.gatsbyjs.com/plugins/gatsby-source-tilda/). Next.js, which is used in to render the blog, is also suitable. On the one hand, it will require more time to integrate with Tilda. On the other, both applications will be on the same tech stack.
 
-![](https://cdn-images-1.medium.com/max/1600/1*WZQayDARH7OF76BUCgBodw.png)
+![](/tilda-website-performance/1*WZQayDARH7OF76BUCgBodw.png)
 
 Transitioning the main site to its own rendering engine built with Gatsby
 

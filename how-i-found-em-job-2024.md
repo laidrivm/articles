@@ -1,5 +1,5 @@
 
-![](https://cdn-images-1.medium.com/max/1600/1*cXAWn44DR5SvGayhTFf23Q.jpeg)
+![](/how-i-found-em-job-2024/1*cXAWn44DR5SvGayhTFf23Q.jpeg)
 
 # How I Found a Job as an Engineering Manager Twice: in 2023 and 2024
 
@@ -30,7 +30,7 @@ I was guided by the idea that only small companies might invite me for roles lik
 
 ### LinkedIn Profile or other extended online CV
 
-![Screenshot of my LinkedIn profile](https://cdn-images-1.medium.com/max/1600/1*fv-YpBbY4qnIUdaCXX1PdQ.png)
+![Screenshot of my LinkedIn profile](/how-i-found-em-job-2024/1*fv-YpBbY4qnIUdaCXX1PdQ.png)
 
 Everyone knows about [LinkedIn](https://www.linkedin.com/in/vladimir-lazarev/). It’s the main international social network for job searching. A well-filled profile will help you quickly build your networkand receive more interesting messages from recruiters.
 
@@ -87,7 +87,7 @@ As a reference I’ll also share a couple of my friends’ profiles I find great
 
 ### One-pager PDF
 
-![Screenshot of my one-pager CV in Figma](https://cdn-images-1.medium.com/max/1600/1*mtEeIi7mu3pJPD_VuzKRvg.png)
+![Screenshot of my one-pager CV in Figma](/how-i-found-em-job-2024/1*mtEeIi7mu3pJPD_VuzKRvg.png)
 
 That’s an “offline” version of your CV you attach to emails or other applications. It’s great if everything fits on an A4 page because it saves time for the recruiter and hiring manager, and in fact no one looks further. However, don’t make it too cramped — it’s better to fill out a ready-made template at the default scale. If it turns out to be a couple of pages, that’s fine.
 
@@ -186,7 +186,7 @@ There are two main categories here: aggregators and company websites. I rarely u
 
 Using company websites is trickier. When I was actively looking for a job, I created a long list of companies I would like to work for.
 
-![Screenshot of Google Sheet with a long list of a companies where I’ve looked for positions](https://cdn-images-1.medium.com/max/1600/1*WUiNyA5eRatlvHqW6No-sQ.png)
+![Screenshot of Google Sheet with a long list of a companies where I’ve looked for positions](/how-i-found-em-job-2024/1*WUiNyA5eRatlvHqW6No-sQ.png)
 
 To do this, I wrote down a list of criteria that are important to me, what they mean in detail, and what compromises I am willing to make:
 
@@ -203,7 +203,7 @@ If there are many vacancies, you can divide companies into target and non-target
 
 ## Applications
 
-![Screenshot of a Google Sheet with my applications and statuses](https://cdn-images-1.medium.com/max/1600/1*IuA4IgGuMJXrTlEJKLGGVQ.png)
+![Screenshot of a Google Sheet with my applications and statuses](/how-i-found-em-job-2024/1*IuA4IgGuMJXrTlEJKLGGVQ.png)
 
 I started recording all applications: when and with whom I contacted, what we discussed, and what’s the status. For interactions that went beyond initial call with recruiters, I kept notes. This helped a lot in not having to keep the context in mind and being able to restore it in a few minutes when needed. It also prevented me from repeating questions and allowed me to use each communication to specify the information about the company, team, and position.
 
@@ -265,7 +265,7 @@ What do I do here:
 
 ## Interviews
 
-![Screenshot of a note from an interview](https://cdn-images-1.medium.com/max/1600/1*H-1GrDCbl9wgz3ir6JXxEA.png)
+![Screenshot of a note from an interview](/how-i-found-em-job-2024/1*H-1GrDCbl9wgz3ir6JXxEA.png)
 
 When it comes to interviews, I take notes at every stage. Later, I try to transfer these notes from paper to Notion, though I often get lazy about it. When dealing with multiple stages and several companies in parallel, notes are extremely helpful for not keeping the context in mind but quickly refreshing it before the next interview. Each document ends up with this structure:
 

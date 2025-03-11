@@ -1,4 +1,4 @@
-![](https://cdn-images-1.medium.com/max/2400/1*J3YnFYjwI8Mp2KIcX2lC3A.jpeg)
+![](/personal-education-system/1*J3YnFYjwI8Mp2KIcX2lC3A.jpeg)
 
 # Personal Education System
 
@@ -32,7 +32,7 @@ Okay, as we learn continuously and the learining itselft profits our lives, how 
 
 ## Education system
 
-![](https://cdn-images-1.medium.com/max/1600/1*rgN_ghcFzzfXB6cVHRGtrA.png)
+![](/personal-education-system/1*rgN_ghcFzzfXB6cVHRGtrA.png)
 
 I believe that maximising the learning output can be achieved through purposeful and regular practice. However, I should note that it’s not mandatory; even learning occasionally following bare interest is far better than not learning at all.
 
@@ -42,7 +42,7 @@ Let me explain how this works for me.
 
 ### System fundamentals
 
-![](https://cdn-images-1.medium.com/max/1600/1*jkuDAETeTnkhMj-8Y21Bwg.png)
+![](/personal-education-system/1*jkuDAETeTnkhMj-8Y21Bwg.png)
 
 My system on a scheme
 
@@ -76,7 +76,7 @@ Maybe this isn’t the best path among the possibilities, but it suits me fine. 
 
 ### Pace
 
-![](https://cdn-images-1.medium.com/max/1600/1*cHklUoadahE51SQTiLJxrA.png)
+![](/personal-education-system/1*cHklUoadahE51SQTiLJxrA.png)
 
 How my pace changed over the years
 
@@ -101,7 +101,7 @@ This refers to how different sources are combined and what happens in the system
 
 ### Books
 
-![](https://cdn-images-1.medium.com/max/1600/1*Slb7wzOVCqWZVamzVN0BwQ.png)
+![](/personal-education-system/1*Slb7wzOVCqWZVamzVN0BwQ.png)
 
 My nerd book log and backlog
 

@@ -1,6 +1,6 @@
 # Guide: why and how to implement communication agreement
 
-![Article cover with office meeting meme on it](https://cdn-images-1.medium.com/max/1600/1*T1I4KSCSciqzxUBeWa74gA.jpeg)
+![Article cover with office meeting meme on it](/communication-agreement/1*T1I4KSCSciqzxUBeWa74gA.jpeg)
 
 I know three types of communication: personal, team-based, and cross-team. We spend on them from a couple of hours to the entire workday, depending on the role, process maturity, and the lunar phase. Each type has its specifics. For example, I’ve already published [a separate article about 1–1 communications](https://medium.com/@laidrivm/guide-why-and-how-to-do-1-to-1s-a6c270ff021b).
 

@@ -27,7 +27,7 @@ To handle the situation of recreation, we need to automatically boot the VM and 
 
 Google also releases a static IP if it was assigned to a deleted VM. To bypass this issue, we’ll use a Managed Load Balancer since the current load falls into the free tier.
 
-![A diagram that shows how the solution looks like](https://cdn-images-1.medium.com/max/1600/1*QqgZhdykGQuSajWlZ4hK4Q.png)
+![A diagram that shows how the solution looks like](/google-cloud-vms/1*QqgZhdykGQuSajWlZ4hK4Q.png)
 
 How it schematically looks like. Of course, network firewall filters not only incoming traffic, but also outcoming and inner one
 
@@ -35,7 +35,7 @@ Now let’s move on to the specific steps.
 
 ## Create a network
 
-![Screenshot of a creation of a new network in Google Cloud Console](https://cdn-images-1.medium.com/max/1600/1*2NyNXcKsgSZWHfh1z8xCQQ.png)
+![Screenshot of a creation of a new network in Google Cloud Console](/google-cloud-vms/1*2NyNXcKsgSZWHfh1z8xCQQ.png)
 
 Without a network, you won’t be able to proceed with the following steps
 
@@ -43,7 +43,7 @@ Navigate to [VPC Network → VPC Networks → Create VPC Network](https://consol
 
 ## Create an instance template
 
-![Screenshot of a creation of a new instance template in Google Cloud Console](https://cdn-images-1.medium.com/max/1600/1*esavJptlmgjHaJ4KC26EDA.png)
+![Screenshot of a creation of a new instance template in Google Cloud Console](/google-cloud-vms/1*esavJptlmgjHaJ4KC26EDA.png)
 
 In Google Cloud there are many entities. So I duplicate in the name what it is, specify the characteristics, and the template version. If you will have only one VM in the project, you can skip this complexity. In large projects, the name can become something like “it-n1-s1-spot-ubuntu-iowa-default-3”
 
@@ -55,17 +55,17 @@ Surprisingly, n1 is the best tier in terms of the vCPU-RAM-Cost balance. The sit
 
 You can also compare costs in the [documentation](https://cloud.google.com/compute/all-pricing) and [pricing calculator](https://cloud.google.com/products/calculator). Here I’ll note once again that, in general, I don’t recommend renting VMs in Google Cloud because of their cost:
 
-![Screenshot of a Hetzner admin panel with a creation of a new VM and it’s cost](https://cdn-images-1.medium.com/max/1600/1*RqMCaZzYj4P-fpQf2OsT2w.png)
+![Screenshot of a Hetzner admin panel with a creation of a new VM and it’s cost](/google-cloud-vms/1*RqMCaZzYj4P-fpQf2OsT2w.png)
 
 Just to compare, the cost of a dedicated VM at Hetzner with two vCPUs, 2GB RAM, 40GB SSD, and a static IP for a month is EUR 4.35
 
-![Two screenshots of a Google Cloud price calculator with equivalent VMs — one spot and one regular, and their costs](https://cdn-images-1.medium.com/max/1600/1*KQSezaMb6n9p951v7icOsQ.png)
+![Two screenshots of a Google Cloud price calculator with equivalent VMs — one spot and one regular, and their costs](/google-cloud-vms/1*KQSezaMb6n9p951v7icOsQ.png)
 
 At Google, you would have to pay EUR 30.73 for a similar dedicated VM — 7 times more expensive! A Spot VM would cost “only” x3 — EUR 14.07
 
 Now, let’s return to the instance group settings. If you choose VM similar to n2-starndart-2 or more powerful, enable the confidential VM service. Otherwise, I believe this feature doesn’t worth such an upgrade — so just move on.
 
-![Another screenshot of a creation of a new instance template — with the fields below regarding the previous one](https://cdn-images-1.medium.com/max/1600/1*n7ZS-6ebihXhGNhwFNscrw.png)
+![Another screenshot of a creation of a new instance template — with the fields below regarding the previous one](/google-cloud-vms/1*n7ZS-6ebihXhGNhwFNscrw.png)
 
 In theory, you can deploy the container directly with the application on the VM. However, I decided to stick with a regular OS and run the container inside it
 
@@ -96,7 +96,7 @@ There’s nothing particularly unique here: I update packages, install Docker us
 
 ## Set up a health check
 
-![Screenshot of a creation of settings of a new health check](https://cdn-images-1.medium.com/max/1600/1*MaJViD42OoH3oWx6X9jMBg.png)
+![Screenshot of a creation of settings of a new health check](/google-cloud-vms/1*MaJViD42OoH3oWx6X9jMBg.png)
 
 Basically, a health check is a method of an application to determine externally, if it’s alive and working. In Google Cloud it is a corresponding automated check
 
@@ -108,7 +108,7 @@ In my application, the health check endpoint is available directly at the route 
 
 ## Create an Instance Group
 
-![Screenshot of a creation of a new instance group](https://cdn-images-1.medium.com/max/1600/1*_jX9hGER4M_mK4wPXQU8Qg.png)
+![Screenshot of a creation of a new instance group](/google-cloud-vms/1*_jX9hGER4M_mK4wPXQU8Qg.png)
 
 I create stateless instance group as far as I have stateless app
 
@@ -122,7 +122,7 @@ In the “Updates during VM instance repair” section, choose to update the ins
 
 After completing this, a VM should be automatically created, and your application will be deployed on it according to the scripts. You can check this by going to [Compute Engine → VM Instances](https://console.cloud.google.com/compute/instances) and connecting to the virtual machine via SSH.
 
-![Screenshot of a created VM instance and how to access logs and monitoring sections from the user interface](https://cdn-images-1.medium.com/max/1600/1*9c7edWJl82y26c_ygQXAdg.png)
+![Screenshot of a created VM instance and how to access logs and monitoring sections from the user interface](/google-cloud-vms/1*9c7edWJl82y26c_ygQXAdg.png)
 
 You can also view the logs and metrics of a created VM — to check if everything goes as expected
 
@@ -132,11 +132,11 @@ Don’t hesitate to create new entities and delete old ones if you’re having t
 
 ## Create a managed load balancer
 
-![Screenshot of configuring a frontend service while creating a new managed load balancer](https://cdn-images-1.medium.com/max/1600/1*oS6KLxsym_p6OTEEswNe9Q.png)
+![Screenshot of configuring a frontend service while creating a new managed load balancer](/google-cloud-vms/1*oS6KLxsym_p6OTEEswNe9Q.png)
 
 Now, navigate to [Network Services → Load Balancing → Create a load balancer](https://console.cloud.google.com/net-services/loadbalancing/add). Choose the “start configuration” for the Application Load Balancer. Keep the default values for the radio buttons and click “Continue”. Choose a frontend name — the other settings are suitable for accepting HTTP requests. Move on to the backend section.
 
-![Screenshot of a creation of a new backend service while creating a new managed load balancer](https://cdn-images-1.medium.com/max/1600/1*xRDDtdEABs-ADVgkfImgQg.png)
+![Screenshot of a creation of a new backend service while creating a new managed load balancer](/google-cloud-vms/1*xRDDtdEABs-ADVgkfImgQg.png)
 
 In the list of backends, choose to create a new backend. Change the type to “instance group” and select the instance group you created earlier. Scroll down the form and choose the created health check.
 
@@ -144,7 +144,7 @@ For routing rules, leave it as a “simple host and path rule.” Proceed and cr
 
 ### Promote load balancer’s IP to static
 
-![Screenshot showing how to promote IP address to static in the user interface](https://cdn-images-1.medium.com/max/1600/1*x7gNeNYMesLGOeGEHA-53g.png)
+![Screenshot showing how to promote IP address to static in the user interface](/google-cloud-vms/1*x7gNeNYMesLGOeGEHA-53g.png)
 
 Finally, go to [VPC Network → IP Addresses](https://console.cloud.google.com/networking/addresses/list). There, find the IP address with a “Forwarding rule …” description — this is the load balancer. Click on the three dots and select “promote to static IP address.”
 
@@ -152,7 +152,7 @@ To make everything work, you only need to update the DNS record. The remaining t
 
 ## Optional: review the firewall settings
 
-![Screenshot showing the suggested firewall rules while creating a new network firewall policy](https://cdn-images-1.medium.com/max/1600/1*Zf2oJYd8FckMgq1fGX2UIA.png)
+![Screenshot showing the suggested firewall rules while creating a new network firewall policy](/google-cloud-vms/1*Zf2oJYd8FckMgq1fGX2UIA.png)
 
 Open [Network Security → Firewall policies](https://console.cloud.google.com/net-security/firewall-manager/firewall-policies/list).
 
@@ -168,7 +168,7 @@ Setting up alerts can be a good practice, especially when you have preemptible V
 
 To begin with, you should configure the recipients of the notification. You can do this by clicking on [edit notification channels](https://console.cloud.google.com/monitoring/alerting/notifications). Google Cloud supports various channels, including email, SMS, Slack, PagerDuty, its own Pub/Sub, and custom webhooks.
 
-![Screenshot of a creation of a new alert using available metrics](https://cdn-images-1.medium.com/max/1600/1*t1FsLrnaNYxOoQhnMgrdkg.png)
+![Screenshot of a creation of a new alert using available metrics](/google-cloud-vms/1*t1FsLrnaNYxOoQhnMgrdkg.png)
 
 I set up a basic alert that triggers on VM deletion and creation. This way, if the webhook doesn’t work, I can understand this from the email notification and know when to retry an attempt.
 
@@ -181,7 +181,7 @@ Now that’s it. But there are still things to improve in the current configurat
 -   Add a second virtual machine and implement request replication if it was processed on a preempted VM.
 -   Consider the “infrastructure as code” approach: set up Ansible, Terraform, or a more lightweight tool to manage infrastructure using declarative configurations stored on GitHub in a repository adjacent to the project’s code.
 
-![A diagram showing improved version of the system](https://cdn-images-1.medium.com/max/1600/1*jFTT_RhOKlv_TtfR_tm2EQ.png)
+![A diagram showing improved version of the system](/google-cloud-vms/1*jFTT_RhOKlv_TtfR_tm2EQ.png)
 
 How improved system might look like. Health checks and firewall are omitted
 

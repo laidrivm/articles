@@ -1,4 +1,4 @@
-![](https://cdn-images-1.medium.com/max/1600/1*Bv5VN-NwxcQofQLQNXq1DQ.png)
+![](/feedback/1*Bv5VN-NwxcQofQLQNXq1DQ.png)
 
 # Guide: how to ask for, give, accept and process feedback
 

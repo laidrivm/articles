@@ -8,7 +8,7 @@ For a brief description check [the slides for incubators](/mellon-for-incubators
 
 ### Market
 
-![Current market shares distribution map[8]](https://i.postimg.cc/3wt1B3HD/1.png)
+![Current market shares distribution map[8]](/mellon/1.png)
 
 Current market shares distribution map[8]
 
@@ -18,31 +18,31 @@ The European password management market demonstrated 28% growth rate in 2019—2
 - Stringent regulatory frameworks such as the General Data Protection Regulation (GDPR) have heightened the need for robust password management to ensure compliance and protect sensitive information.
 - The shift towards remote work has increased the number of online accounts and devices, necessitating secure password practices.
 
-![Password management market considered to be quite competitive according to the Mordor Intelligence’s password management industry analytical report[3]](https://i.postimg.cc/mkHSBM1Q/2.png)
+![Password management market considered to be quite competitive according to the Mordor Intelligence’s password management industry analytical report[3]](/mellon/2.png)
 
 Password management market considered to be quite competitive according to the Mordor Intelligence’s password management industry analytical report[3]
 
 Global password management market also offers a lot of opportunities. On the one hand, analysts forecast the global market growth from 14.3%[2] to 27.5%[3] yearly reaching $8 billion by 2030. On the other hand, it remains quite competitive and without dominant players[3] resulting in some tiny apps having hundreds of thousands USD revenue[1]. Despite of 38% of the current revenue shared in North America[8], reports show 30% projected growth rate in Pacific Asia[3] due to digital transformation and growing number of SMEs in the region[9], who face challenges in safeguarding sensitive information.
 
-![Predicted market growth tempo map[3]](https://i.postimg.cc/59YgBcK6/3.png)
+![Predicted market growth tempo map[3]](/mellon/3.png)
 
 Predicted market growth tempo map[3]
 
 This makes Asia and Pacific password management market expected to grow at the fastest CAGR over the forecast period. The market is driven by the growing number of small and medium-sized businesses in the region. Furthermore, an increasing number of technology users and continuously evolving infrastructure contribute to driving the market.
 
-![Normalising response rate from [Security.org](http://Security.org)’s annual report[4] gives such a distribution of methods for managing multiple internet passwords](https://i.postimg.cc/bJMR7Lry/4.png)
+![Normalising response rate from [Security.org](http://Security.org)’s annual report[4] gives such a distribution of methods for managing multiple internet passwords](/mellon/4.png)
 
 Normalising response rate from [Security.org](http://Security.org)’s annual report[4] gives such a distribution of methods for managing multiple internet passwords
 
 In Portugal, the cybersecurity market is projected to grow by 7.75% annually between 2025 and 2029, reaching $239 million by 2029[5]. Despite this growth, Portugal faces a significant shortage of cybersecurity professionals, with a 30% job vacancy rate in the sector[6]. Password managers cover only 25%[4] of potential users considering indirect competitors: memorisation, paper or digital notes and browser storages. Mellon fills these gaps providing a solution for these individuals and SMEs who cannot afford dedicated security teams.
 
-![Personal market is growing, but business market is growing even faster[4]](https://i.postimg.cc/zXTkQCrN/5.png)
+![Personal market is growing, but business market is growing even faster[4]](/mellon/5.png)
 
 Personal market is growing, but business market is growing even faster[4]
 
 ### Competitors features
 
-![Screenshot 2025-01-29 at 16.22.53.png](https://i.postimg.cc/259dWT4Q/6.png)
+![Screenshot 2025-01-29 at 16.22.53.png](/mellon/6.png)
 
 [Our market research](https://docs.google.com/spreadsheets/d/1TRoU6Lo783eqLC8biEb5_IVea5ASCDCUHBcOjGHFZaQ/edit?gid=1009754274#gid=1009754274) shows, that digital security tools often compromise on usability, transparency, or innovation. Mellon addresses gaps identified in over 30 password management solutions, including [Bitwarden](https://bitwarden.com/), [LastPass](https://www.lastpass.com/), and [1Password](https://1password.com/). We compared these products by the following factors:
 
@@ -83,7 +83,7 @@ Publicly available passwords management users researches[4] also provide few in-
 
 ### Competitors numbers
 
-![Screenshot 2025-01-29 at 16.23.21.png](https://i.postimg.cc/wvtXQJVS/7.png)
+![Screenshot 2025-01-29 at 16.23.21.png](/mellon/7.png)
 
 In the very same analysis, we captured statistics on possible usage and revenue. The method we used:
 
@@ -147,7 +147,7 @@ Might further be used for such problems as to validate end-to-end encryption, to
 
 ### Monetisation
 
-![Screenshot 2024-12-13 at 23.17.06.png](https://i.postimg.cc/htg0RXDd/8.png)
+![Screenshot 2024-12-13 at 23.17.06.png](/mellon/8.png)
 
 Mellon’s pricing positioning will remain competitive:
 
@@ -171,7 +171,7 @@ Meanwhile, we’re going to combine this pricing with various mechanics to impro
 ## Why we expect it to be successful
 
 ### Finances
-![9.png](https://i.postimg.cc/Kzdnqzp4/9.png)
+![9.png](/mellon/9.png)
 We’ve calculated [a financial plan for the first 5 years](https://docs.google.com/spreadsheets/d/15M55fycYUv009NIfZJQrFvLoNCnASicz6AkxnT4PLz4/edit?usp=sharing) of working on the product. We’ve taken into account reserve for paperwork and missed deadlines. We also optimised marketing and product strategies to lower the burn rate required to develop product. Finally, our estimations are based on a complex model, incorporating retention, new users acquisition, taxes, salaries, infrastructure and other expenses, all the incomes and various conversion rates.
 
 We estimated project turnover in the 5th year of €352.000. It is supported by:
@@ -214,7 +214,7 @@ Another point we’d like to cover is the idea to create product with English an
 
 ### Marketing
 
-![Screenshot 2024-12-13 at 23.18.57.png](https://i.postimg.cc/P54QXdJF/10.png)
+![Screenshot 2024-12-13 at 23.18.57.png](/mellon/10.png)
 
 We see a rich possibility to acquire users through various digital marketing channels:
 
@@ -228,7 +228,7 @@ We see a rich possibility to acquire users through various digital marketing cha
 - Portuguese tech influencers. Starting from microbloggers with under 50 000 audience found on [Influencer Hero](https://www.influencer-hero.com/blogs/top-portuguese-instagram-influencers-find-influencers-in-portugal), [Collabstr](https://collabstr.com/influencer-marketing/lisbon-portugal) or similar services — or directly signed by our marketing team. Ending with famous ones like [Bernardo Almeida](https://www.youtube.com/channel/UCDOZDfbVGOrywV4n0WeaRAA) or [Nuno Agonia](https://www.youtube.com/c/nunoagonia).
 - Localised advertisement campaigns. Culturally relevant marketing with relatable offers on Facebook, Instagram, Youtube, Google Ads and other platforms. Promotional campaigns with discounts leveraging local holidays like Christmas or Dia de Portugal.
 
-![Screenshot 2024-12-13 at 23.27.44.png](https://i.postimg.cc/jjSQCBJq/11.png)
+![Screenshot 2024-12-13 at 23.27.44.png](/mellon/11.png)
 
 Key unique advantages for market differentiation and selling points we are going to test in our marketing campaigns transparently communicating possible values:
 

@@ -1,4 +1,4 @@
-![](https://cdn-images-1.medium.com/max/1600/1*tRGyCmNegfdKeDdPYo6UQA.jpeg)
+![](/how-i-built-this-site-part-1/1*tRGyCmNegfdKeDdPYo6UQA.jpeg)
 
 # What I learned by building static website with Bun, Elysia and JSX in 2024
 
@@ -203,7 +203,7 @@ Alternatives that I spotted [in a talk by Vsevolod Detkin aka kravetsone, RU](ht
 
 Now let’s go through some aspect with [Elysia](https://elysiajs.com/).
 
-![Screenshot of a benchmarking JS and TS frameworks hardware performance](https://cdn-images-1.medium.com/max/1600/1*2HZNYC71sJszj1Uk1Fpu-w.png)
+![Screenshot of a benchmarking JS and TS frameworks hardware performance](/how-i-built-this-site-part-1/1*2HZNYC71sJszj1Uk1Fpu-w.png)
 
 **Performance**. Elysia [mostly outperforms everyone](https://www.techempower.com/benchmarks/#hw=ph&test=fortune&section=data-r22). Above it we see either some nonames, or hyper-express, which I already mentioned, or uwebsockets, which I also mentioned and consider too low-level.
 
@@ -234,7 +234,7 @@ new Elysia()
 
 Secondly, there are already many useful plugins: CORS, JWT, OpenTelemetry, OpenAPI — [and others](https://elysiajs.com/plugins/overview.html). I used `@elysiajs/static` and tried to use `@elysiajs/html`, which I will discuss later.
 
-![Diagram of Elysia’s request lyfecycle](https://cdn-images-1.medium.com/max/1600/1*NEoCzSZZ2i8dk5vkueXOIA.png)
+![Diagram of Elysia’s request lyfecycle](/how-i-built-this-site-part-1/1*NEoCzSZZ2i8dk5vkueXOIA.png)
 
 **Hooks and LyfeCycle**. A hook is a function that intercepts the request’s life cycle event. Fastify has the same approach, which is a modern replacement (or extension, if you wish) for Express middleware.
 
@@ -322,7 +322,7 @@ A few lines about what else ended up in the project dependencies:
 
 ## Creating blog
 
-![Diagram of the blog MVP: using Cloudflare DNS, VM to host single container with single app instance and Docker Hub as a registry](https://cdn-images-1.medium.com/max/1600/1*pUQsmrwZ-pgMXrs0itRJ4A.png)
+![Diagram of the blog MVP: using Cloudflare DNS, VM to host single container with single app instance and Docker Hub as a registry](/how-i-built-this-site-part-1/1*pUQsmrwZ-pgMXrs0itRJ4A.png)
 
 Blog MVP scheme
 
@@ -770,7 +770,7 @@ I can’t yet fully evaluate how the project will scale with a growing codebase 
 
 In a perfect world, for static sites, I’m into [a scheme I described in the article on Tilda optimisation](https://medium.com/@laidrivm/what-to-do-if-you-are-not-satisfied-with-your-tilda-website-performance-90e087a1a2da): serving static files from a CDN. For this project, I see it like this:
 
-![Diagram where users get the blog pages from Cloudflare CDN. There are nginx, two instances of Bun / Elysia app and Mongo database hosted in containers on a VM. Deploys and rerenders are triggered by Github Actions on repos’ changes](https://cdn-images-1.medium.com/max/1600/1*zx07SlOeHwT-vAQt5VJQhQ.png)
+![Diagram where users get the blog pages from Cloudflare CDN. There are nginx, two instances of Bun / Elysia app and Mongo database hosted in containers on a VM. Deploys and rerenders are triggered by Github Actions on repos’ changes](/how-i-built-this-site-part-1/1*zx07SlOeHwT-vAQt5VJQhQ.png)
 
 Scheme how the blog’s supposed to be
 
