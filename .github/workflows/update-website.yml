@@ -1,0 +1,24 @@
+name: Update Website
+
+on:
+  workflow_run:
+    workflows: ["Download Markdown Images"]
+    types:
+      - completed
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: Execute remote commands via SSH to update
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.VM_HOST }}
+          port: ${{ secrets.VM_PORT }}
+          username: ${{ secrets.VM_USERNAME }}
+          password: ${{ secrets.VM_PASS }}
+          script: |
+            sudo ./startup.sh
