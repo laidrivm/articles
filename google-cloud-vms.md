@@ -1,6 +1,6 @@
 # Guide: how to configure cheapest VM for a web service in Google Cloud
 
-Deploying a web service on Google Cloud can be costly and complex. In this guide, I’ll walk you through configuring the most budget-friendly virtual machine (VM) for a simple application. From creating a network to setting up a static IP and load balancer, follow these steps to get your service up and running efficiently.
+Deploying a web service on Google Cloud can be costly and complex. In this guide, I’ll walk you through configuring the cheapest virtual machine for a simple application. From creating a network to setting up a static IP and load balancer, follow these steps to get your service up and running efficiently.
 
 I’ve recently needed to deploy a Node.js application to use its endpoint as a webhook. I couldn’t simply access it by IP, so to avoid dealing with dynamic DNS, a static IP was needed. The company for which I developed this application already had another virtual machine on Google Cloud. So, to avoid adding complexity and multiple providers, I decided to set up a new VM there too.
 
