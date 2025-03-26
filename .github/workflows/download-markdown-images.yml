@@ -30,7 +30,6 @@ jobs:
       - name: Check for Changes
         id: changes
         run: |
-          # Check if there are any changes to commit
           if [[ -n "$(git status --porcelain)" ]]; then
             echo "changes=true" >> $GITHUB_OUTPUT
           else
