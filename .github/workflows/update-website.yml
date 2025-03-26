@@ -19,6 +19,7 @@ jobs:
           host: ${{ secrets.VM_HOST }}
           port: ${{ secrets.VM_PORT }}
           username: ${{ secrets.VM_USERNAME }}
+          password: ${{ secrets.VM_PASS }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_PHRASE }}
           script: |
