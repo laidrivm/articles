@@ -19,10 +19,9 @@ function extractImageReferences(content) {
 
 async function downloadImage(url, savePath) {
   try {
-    // Skip URLs that are clearly not image files
     const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.svg', '.webp', '.bmp', '.ico'];
     const urlLower = url.toLowerCase();
-    
+    // Skip URLs that are clearly not image files
     if (!imageExtensions.some(ext => urlLower.includes(ext)) && 
         !urlLower.includes('/image') && !urlLower.includes('/img') && 
         !urlLower.includes('postimg') && !urlLower.includes('cdn-images')) {
@@ -67,14 +66,14 @@ async function processMarkdownFile(filePath, rootDir) {
   const fileExists = await file.exists();
   if (!fileExists) {
     console.log(`File does not exist: ${filePath}`);
-    return;
+    return { processed: false, imagesDownloaded: 0 };
   }
   
   const content = await file.text();
   const imageReferences = extractImageReferences(content);
   if (imageReferences.length === 0) {
     console.log(`No external images found in ${filePath}`);
-    return;
+    return { processed: false, imagesDownloaded: 0 };
   }
   
   console.log(`Found ${imageReferences.length} external images in ${filePath}`);
@@ -84,14 +83,16 @@ async function processMarkdownFile(filePath, rootDir) {
   const imageSubDir = join(fileDir, fileBaseName);
   
   let updatedContent = content;
+  let imagesDownloaded = 0;
   
-for (const reference of imageReferences) {
+  for (const reference of imageReferences) {
     const { fullMatch, altText, imageUrl } = reference;
     const imageFileName = basename(imageUrl);
     const savePath = join(imageSubDir, imageFileName);
     
     const success = await downloadImage(imageUrl, savePath);
     if (success) {
+      imagesDownloaded++;
       const relativeImagePath = `/${relative(rootDir, savePath).replace(/\\/g, '/')}`;
       const newImageReference = `![${altText}](${relativeImagePath})`;
       // Escape special regex characters in the fullMatch
@@ -102,8 +103,13 @@ for (const reference of imageReferences) {
     }
   }
 
-  await Bun.write(filePath, updatedContent);
-  console.log(`Updated ${filePath}`);
+  if (imagesDownloaded > 0) {
+    await Bun.write(filePath, updatedContent);
+    console.log(`Updated ${filePath}`);
+    return { processed: true, imagesDownloaded };
+  }
+
+  return { processed: false, imagesDownloaded: 0 };
 }
 
 async function findMarkdownFiles(dir, rootDir, files = []) {
@@ -138,11 +144,20 @@ async function main() {
   
   console.log(`Found ${markdownFiles.length} markdown files to process`);
   
+  let totalProcessedFiles = 0;
+  let totalImagesDownloaded = 0;
+  
   for (const filePath of markdownFiles) {
-    await processMarkdownFile(filePath, rootDir);
+    const { processed, imagesDownloaded } = await processMarkdownFile(filePath, rootDir);
+    if (processed) {
+      totalProcessedFiles++;
+      totalImagesDownloaded += imagesDownloaded;
+    }
   }
   
-  console.log('Processing complete');
+  console.log(`Processing complete: ${totalProcessedFiles} files processed, ${totalImagesDownloaded} images downloaded`);
+  
+  process.exit(0);
 }
 
 main().catch(error => {
