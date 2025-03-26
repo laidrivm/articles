@@ -22,4 +22,4 @@ jobs:
           key: ${{ secrets.VM_SSH_KEY }}
           passphrase: ${{ secrets.VM_SSH_PHRASE }}
           script: |
-            sudo ./startup.sh
+            sudo ./deploy.sh
