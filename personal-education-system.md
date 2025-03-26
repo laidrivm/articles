@@ -1,4 +1,4 @@
-![](/personal-education-system/1*J3YnFYjwI8Mp2KIcX2lC3A.jpeg)
+![Article Cover](/personal-education-system/1*J3YnFYjwI8Mp2KIcX2lC3A.jpeg)
 
 # Personal Education System
 
@@ -43,8 +43,7 @@ Let me explain how this works for me.
 ### System fundamentals
 
 ![](/personal-education-system/1*jkuDAETeTnkhMj-8Y21Bwg.png)
-
-My system on a scheme
+*My system on a scheme*
 
 I follow systematic learning. Subjectively, my system feels quite relaxed. In short, it can be described as follows: at any given time, I’m either taking a course, attending a training session, or reading non-fiction. When I finish, I take a couple of weeks to rest and then move on to something new. I keep lists of what I’ve accomplished and what I haven’t, along with comments, to make it easier to choose what to pick up next. Also I surround myself with sources of situational learning so I always have something to switch to.
 
@@ -77,8 +76,7 @@ Maybe this isn’t the best path among the possibilities, but it suits me fine. 
 ### Pace
 
 ![](/personal-education-system/1*cHklUoadahE51SQTiLJxrA.png)
-
-How my pace changed over the years
+*How my pace changed over the years*
 
 Each person’s pace is unique and constantly changing. That’s normal. To determine yours, just start. Listen to yourself, give yourself breaks, but also try to learn regularly. It’s a matter of balance, that comes with experience.
 
@@ -102,8 +100,7 @@ This refers to how different sources are combined and what happens in the system
 ### Books
 
 ![](/personal-education-system/1*Slb7wzOVCqWZVamzVN0BwQ.png)
-
-My nerd book log and backlog
+*My nerd book log and backlog*
 
 Let’s talk about learning sources. The most obvious one is non-fiction books. Here’s what my list looks like, which I’ve been maintaining since 2017. I highly recommend starting with two books: one on self-management and the other on your professional area.
 

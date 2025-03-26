@@ -1,7 +1,8 @@
-
-![](/how-i-found-em-job-2024/1*cXAWn44DR5SvGayhTFf23Q.jpeg)
+![Article Cover](/how-i-found-em-job-2024/1*cXAWn44DR5SvGayhTFf23Q.jpeg)
 
 # How I Found a Job as an Engineering Manager Twice: in 2023 and 2024
+
+Finding a job as an Engineering Manager can be tough, especially when opportunities are limited. I’ll share how I navigated the job market in 2023 and in 2024 — successfully increasing my income both times. From crafting an effective CV to applying for roles, managing interviews, and handling offers.
 
 Recently, a friend asked me how I look for a job. He has became a Head of Engineering, working at a small company where he no longer sees any prospects. He said, there are few job openings available, and those have some strange requirements. If recruiters reach out, it’s mostly about team lead opportunities. The advice I gave him, I adapted and expanded into an article format — and now I’m sharing it with you.
 

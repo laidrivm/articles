@@ -2,6 +2,8 @@
 
 # How to configure and use an email inbox
 
+Managing your email effectively can save time, reduce stress, and keep you focused on what matters most. Whether it’s for work or personal use, a default inbox quickly becomes overwhelming. In this guide, I’ll share my approach to maintaining a clean inbox, minimizing distractions, and handling email pile-ups — all using Gmail as an example.
+
 Today, I was setting up a new work Gmail account. This inspired me to share some tips and tricks for managing email — whether it’s personal or work-related. Why is this important?
 
 Imagine, every day your inbox is flooded with various emails: messages from clients, colleagues, shared document access, task manager notifications, calendar invites, CRM reports, Google Docs comment replies, and all sorts of newsletters. Important or interesting emails get lost among others.
@@ -60,7 +62,7 @@ Turning off notifications helps regain control over your time and attention. In 
 -   [How to Unhijack Your Mind from Your Phone](https://medium.com/thrive-global/distracted-in-2016-reboot-your-phone-with-mindfulness-9f4c8ad46538)
 -   [How Technology is Hijacking Your Mind — from a Magician and Google Design Ethicist](https://medium.com/thrive-global/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3)
 
-Email isn’t typically used for anything truly urgent. It’s an asynchronous channel — it’s naive to think that someone is sitting and meditating on the inbox screen, waiting for the next email. So it’s not a big deal if you check it every few hours. If this causes conflicts, it’s an opportunity to discuss expectations, personal boundaries, and [communication agreements](https://medium.com/@laidrivm/guide-why-and-how-to-implement-communication-agreement-e0803735e2c5)  with those around you.
+Email isn’t typically used for anything truly urgent. It’s an asynchronous channel — it’s naive to think that someone is sitting and meditating on the inbox screen, waiting for the next email. So it’s not a big deal if you check it every few hours. If this causes conflicts, it’s an opportunity to discuss expectations, personal boundaries, and [communication agreements](/communication-agreement)  with those around you.
 
 If you feel the urge to check your inbox more often, try working in “Pomodoros.” This technique involves setting a timer (originally a kitchen timer shaped like a tomato) for 25 minutes, for example, and focusing on one task until the timer goes off. Knowing that the timer will ring soon helps reduce anxiety about missing something urgent and important. So instead of receiving a flood of notifications, you get just one — it’s time to take a break. In fatct, this technique is deeper— the author even [wrote a short book about it](https://www.penguin.co.uk/books/435991/the-pomodoro-technique-by-francesco-cirillo/9780753548394).
 
@@ -131,7 +133,7 @@ Or in an email of the type you’d like to filter:
 
 You can filter emails by sender, recipient, keywords, size, and attachments. If needed, filter by multiple criteria.
 
-For example, I receive Jira Helpdesk emails with ticket status updates. I open one, select Filter Messages like these → Create filter, then check Skip the Inbox, Mark as read, Apply the label — Notifications/Helpdesk (create this label directly in the filter) and Apply filter to matching conversations**.**
+For example, I receive Jira Helpdesk emails with ticket status updates. I open one, select Filter Messages like these → Create filter, then check Skip the Inbox, Mark as read, Apply the label — Notifications/Helpdesk (create this label directly in the filter) and Apply filter to matching conversations.
 
 Another example: I subscribe to a new newsletter, say [Refactoring.fm](https://refactoring.fm/). I want to read it directly in my email review windows, so I apply the Mailings/Refactoring label but don’t skip the Inbox. When I read and archive the email, it automatically goes to the right place.
 

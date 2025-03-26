@@ -2,7 +2,9 @@
 
 # О задержании Дурова
 
-[24 августа в Париже задержали Павла Дурова](https://www.tf1info.fr/justice-faits-divers/info-tf1-lci-le-fondateur-et-pdg-de-la-messagerie-cryptee-telegram-interpelle-en-france-2316072.html). Событие в очередной раз поляризовало представителей разных лагерей. А ещё оказалось очень многогранным. Для меня в нём переплелись:
+[24 августа в Париже задержали Павла Дурова](https://www.tf1info.fr/justice-faits-divers/info-tf1-lci-le-fondateur-et-pdg-de-la-messagerie-cryptee-telegram-interpelle-en-france-2316072.html). Событие в очередной раз поляризовало представителей разных лагерей. А ещё оказалось очень многогранным. Я решил внимательнее его изучить в этой статье.
+
+Для меня в событии переплелись:
 
 -   Эмоции
 -   Маркетинг

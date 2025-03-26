@@ -1,8 +1,8 @@
-![](/how-i-built-this-site-part-1/1*tRGyCmNegfdKeDdPYo6UQA.jpeg)
+![article cover](/how-i-built-this-site-part-1/1*tRGyCmNegfdKeDdPYo6UQA.jpeg)
 
 # What I learned by building static website with Bun, Elysia and JSX in 2024
 
-For a couple of months I’ve wanted to create a self-hosted blog in addition to this Medium-based one. A few weeks ago, I read [R. Mark Volkmann’s Server-Driven Web Apps with htmx](https://pragprog.com/titles/mvhtmx/server-driven-web-apps-with-htmx/), and it inspired me to try building my blog with a modern JS stack. I chose Bun, Elysia, and bare JSX and tried to create a static stie MVP — [here’s the result](https://laidrivm.com/) and [the source code](https://github.com/laidrivm/laidrivm.com).
+For a couple of months I’ve wanted to create a self-hosted blog in addition to [my Medium-based one](https://medium.com/@laidrivm). A few weeks ago, I read [R. Mark Volkmann’s Server-Driven Web Apps with htmx](https://pragprog.com/titles/mvhtmx/server-driven-web-apps-with-htmx/), and it inspired me to try building my blog with a modern JS stack. I chose Bun, Elysia, and bare JSX and tried to create a static site MVP — you're looking at the result, actually, but there's also [the source code](https://github.com/laidrivm/laidrivm.com).
 
 In this article, I’ll discuss these tools and why I chose them: pros, cons, the challenges I met and how I solved them. We’ll come across development and publication of a tiny blog. We’ll also discuss the current state of the modern JS stack. Spoiler: the JS stack is still cursed, and using technologies above in commercial production is questionable. At the end, I’ll share my vision, how the site can be further developed.
 
@@ -323,8 +323,7 @@ A few lines about what else ended up in the project dependencies:
 ## Creating blog
 
 ![Diagram of the blog MVP: using Cloudflare DNS, VM to host single container with single app instance and Docker Hub as a registry](/how-i-built-this-site-part-1/1*pUQsmrwZ-pgMXrs0itRJ4A.png)
-
-Blog MVP scheme
+*Blog MVP scheme*
 
 Alright, enough about the stack, let me tell you how I actually wrote a few lines of code that ended up [in the repo](https://github.com/laidrivm). First, let’s install bun itself:
 
@@ -768,11 +767,10 @@ I can’t yet fully evaluate how the project will scale with a growing codebase 
 
 ## Next steps
 
-In a perfect world, for static sites, I’m into [a scheme I described in the article on Tilda optimisation](https://medium.com/@laidrivm/what-to-do-if-you-are-not-satisfied-with-your-tilda-website-performance-90e087a1a2da): serving static files from a CDN. For this project, I see it like this:
+In a perfect world, for static sites, I’m into [a scheme I described in the article on Tilda optimisation](/tilda-website-performance): serving static files from a CDN. For this project, I see it like this:
 
 ![Diagram where users get the blog pages from Cloudflare CDN. There are nginx, two instances of Bun / Elysia app and Mongo database hosted in containers on a VM. Deploys and rerenders are triggered by Github Actions on repos’ changes](/how-i-built-this-site-part-1/1*zx07SlOeHwT-vAQt5VJQhQ.png)
-
-Scheme how the blog’s supposed to be
+*Scheme how the blog’s supposed to be*
 
 Yet I’m far from a reliable setup, [12-factor app](https://12factor.net/), or [other cool things](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/) that even a pet project should have. There is still a lot of work:
 

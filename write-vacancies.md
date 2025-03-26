@@ -1,11 +1,12 @@
-
 ![Screenshot of the list with the positions I published last year](/write-vacancies/1*ZBs7dlM7eJD3StbrQh4y-A.png)
 
 # Guide: how to write job openings
 
-I’ve hired more than 50 people for 4 years as an Engineering Manager. I’ve developed hiring processes with my team, sought advice and hired consults, attended courses and training. Candidates I’ve interacted with have thanked me for great job descriptions, non-template interviews, and constructive feedback. This includes both those I hired and those I declined. Tinkoff once awarded me for the best fit-interviews in the company. Here’s what I’ve learned and how you can do the same.
+Writing a compelling job opening is an art that directly impacts your hiring success. In this guide, I’ll walk you through the essential steps to create a job description that truly reflects the role, attracts the right candidates, and sets clear expectations. Using an example, I’ll break down how to structure, edit, format, and distribute your opening effectively. This guide will help you write openings that stand out and drive results.
 
-The hiring process as a whole is huge: from understanding hiring needs to a successful onboarding of another newbie. Right now I want to focus on the opening: how to fill it with meaning, edit, format, publish, and distribute. I’ll show an example from Emerging Travel Group and then share the general ideas and approached behind it.
+Why I'm an expert here? Well, I’ve hired more than 50 people for 4 years as an Engineering Manager. I’ve developed hiring processes with my team, sought advice and hired consults, attended courses and training. Candidates I’ve interacted with have thanked me for great job descriptions, non-template interviews, and constructive feedback. This includes both those I hired and those I declined. Tinkoff once awarded me for the best fit-interviews in the company. Here’s what I’ve learned and how you can do the same.
+
+The hiring process as a whole is huge: from understanding hiring needs to a successful onboarding of another newbie. I’ll show an example from Emerging Travel Group and then share the general ideas and approached behind it.
 
 ## How I write an opening
 
@@ -16,8 +17,7 @@ There are usually two situations when I open a position: replacing an employee o
 Here’s an example of a position I opened at [Emerging Travel Group](https://www.emergingtravel.com/career/). I agreed with other managers that we’re forming a new team. The products I was responsible for were blocked by external dependencies. They were developed slower than desired, it bothered products. My teams couldn’t pick up this work without dropping one of their own — where they were experts. When we discussed this, I created and approved a vision of how it should work:
 
 ![A workflow diagram describing the proccesses of a new team from the example](/write-vacancies/1*oziK1iXfOq3ifYafcoW7PQ.png)
-
-To define the need and position details, try to create a diagram, where the elements are the required positions. It might be org. chart, workflow or something mixed with systems design scheme
+*To define the need and position details, try to create a diagram, where the elements are the required positions. It might be org. chart, workflow or something mixed with systems design scheme*
 
 To make this scheme work, we need an analyst, a backend developer, a frontend developer, and a tester. Let’s focus on the analyst, as the most complex role here.
 
@@ -215,8 +215,7 @@ We could find ourselves in a situation where a manager tells us, “I’ve got t
 If the recruiter asks for a description, we could copy-paste someone else’s or ask ChatGPT. Don’t candidates already know what engineers are supposed to do?
 
 ![Screenshot of a stock job opening description](/write-vacancies/1*18INGPYveiA_uGdSOL4XLw.png)
-
-I guess you’ve got the idea
+*I guess you’ve got the idea*
 
 Here’s a default job description with stock responsibilities, qualifications and other points. As a candidate, I see a lot of questions about such a description:
 
@@ -246,8 +245,7 @@ The person who wrote this might know the answers to all these questions. But it�
 Understandable if this thought crossed your mind after the example. To address this, let’s look at the hiring funnel and vacancy resizing.
 
 ![Hiring funnel, where 100 applicants convert to 2 accepted offers](/write-vacancies/1*dD24qftwtW0k45quFgOcgQ.png)
-
-The funnel — a model that visualises the hiring process
+*The funnel — a model that visualises the hiring process*
 
 Hiring consists of stages. Candidates become fewer as they pass from one stage to the next. The ratio of candidates who pass further to all candidates on this stage is the conversion rate. In the initial stages: applications and cold contacts by recruiters — there are more candidates than when we make an offer. That’s why the visualisation looks like a funnel.
 
@@ -384,7 +382,7 @@ There are situations where the company has pool hiring. They first hire a typica
 
 **In work chats.** No one sells a job in a company or exact team better than the people who already work there — to their friends. Of course, if they do like it. These people will invite colleagues from previous workplaces they have already worked with well. Many companies have a bonus for a successful referral, so the motivation is there. If there is no such bonus, offer something you can afford yourself: from an Amazon certificate to a box of beer —as a material equivalent of “thank you.”
 
-**On your social networks.** How to set up a profile and build a network [I briefly described in another article](https://medium.com/@laidrivm/how-i-found-a-job-as-an-engineering-manager-twice-in-2023-and-2024-906f00ee39f5), in the LinkedIn profile and Social networks sections. You can ask friends from the industry, who have enough relevant subscribers, to post too. If the company has social networks, ask their administrators to post there. If they resist, suggest making regular digests with other positions as well. Finally, you can set up targeted ads.
+**On your social networks.** How to set up a profile and build a network [I briefly described in another article](/how-i-found-em-job-2024), in the LinkedIn profile and Social networks sections. You can ask friends from the industry, who have enough relevant subscribers, to post too. If the company has social networks, ask their administrators to post there. If they resist, suggest making regular digests with other positions as well. Finally, you can set up targeted ads.
 
 **In professional communities.** For example, if you are looking for a developer on FastAPI, post in the FastAPI Devs chat. Check beforehand that posting your openings is allowed by the rules. Or there might be contacts where you need to send your opening to be posted. I personally use framework communities, graduate chats of various courses, closed communities where people also look for jobs, and purely job chats by location, like IT Jobs Serbia. This method has brought me dozens of employees — both direct reports and employees for other teams.
 
@@ -410,7 +408,7 @@ I also want to share the thought that many really great specialists don’t have
 
 It’s normal to adapt the vacancy at any time until you hire an employee. And when you hire — write that the position is closed. At the same time, you shouldn’t delete the publications themselves because they will get indexed or pop up in some other way — giving a chance for a suitable candidate to write to you in the future.
 
-During the hiring process, you will receive feedback: how many people respond, how many of these responses suit you, how candidates perform in interviews, what they ask during the process. All this is an opportunity to reflect and update the vacancy. Or consider these signals in future hires. I also wrote separate article on [how to work with feedback in general](https://medium.com/@laidrivm/guide-how-to-ask-for-give-accept-and-process-feedback-9e3a1d061e74).
+During the hiring process, you will receive feedback: how many people respond, how many of these responses suit you, how candidates perform in interviews, what they ask during the process. All this is an opportunity to reflect and update the vacancy. Or consider these signals in future hires. I also wrote separate article on [how to work with feedback in general](/feedback).
 
 ## What’s next
 

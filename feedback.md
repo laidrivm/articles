@@ -1,6 +1,8 @@
-![](/feedback/1*Bv5VN-NwxcQofQLQNXq1DQ.png)
+![Article cover](/feedback/1*Bv5VN-NwxcQofQLQNXq1DQ.png)
 
 # Guide: how to ask for, give, accept and process feedback
+
+Giving and receiving feedback is a valuable skill that helps individuals and teams grow. Whether it’s recognizing achievements or addressing challenges, feedback fosters improvement and strengthens relationships. In this guide, I’ll cover why feedback matters, how to ask for it, deliver it effectively, and process it constructively.
 
 My former colleague recently asked me to share a document on how to give feedback. I came up that I had written a lot on this topic: how to work with feedback for performance reviews, how to criticise and highlight problems to get them fixed, and which methods help in this process. I decided to compile all of this into one article, and here it is.
 
@@ -42,7 +44,7 @@ Let’s take a look at the situations where it’s convenient to request feedbac
 -   **Proposing an idea**. When you suggest doing something new or doing something differently at a meeting or in a chat, like during a retrospective. And other participants react to your proposal.
 -   **Writing design docs, ADRs, or RFCs**. When you explore a problem, the options to solve it, choose and justify the best one, document it, and share it. Or when you comment on someone else’s document.
 -   **Presenting a result**. When you tell others that you have launched a feature, completed a project, and all that: via a chat message, a recorded video, or live demo. It’s an opportunity to gather likes and discuss what went well or not so well in the process, and what thoughts there are about the outcome.
--   **Leading or speaking at a meeting**. Afterwards, you can ask participants what they think of your participation. One-on-one meetings are a special case. This is an individual meeting where you can exchange feedback, not necessarily between an employee and their manager. [My article with details](https://medium.com/@laidrivm/guide-why-and-how-to-do-1-to-1s-a6c270ff021b).
+-   **Leading or speaking at a meeting**. Afterwards, you can ask participants what they think of your participation. One-on-one meetings are a special case. This is an individual meeting where you can exchange feedback, not necessarily between an employee and their manager. [My article with details](/1-1s).
 -   **Reviewing performance**. Where exchanging feedback with colleagues: managers, reports, and peers — is an important part of the process itself.
 
 When requesting feedback, it’s useful to get more than just general comments like “how am I doing?” but to ask for opinions on specific things:
@@ -128,7 +130,7 @@ It’s better to find the responsible person — someone who worked on or ma
 
 > _Mike, I’m receiving too much emails about my article being liked. I was pleased at first, but now I’m annoyed because I don’t know what to do with this information, and I get five emails a day._
 
-### Criticise Privately
+### Criticise privately
 
 Often, feedback is given in a general chat, and this has consequences: responsibility gets blurred, responses take longer, everyone watches a thread that doesn’t concern them, and it demoralises people — they worked hard and had reasons for such results.
 
@@ -182,7 +184,7 @@ Better approach:
 >  — Yes, it’s the images. We tried compressing JPEGs, but illustrators didn’t like the result: it looked blurry on retina displays.  
 > — Hmm, have you tried converting images to FLAC, creating multiple resized versions, and loading the appropriate one for the device? I saw an article on this with a link to a ready tool, let me find it._
 
-### Share context of the problem
+### Share the context of the problem
 
 Explaining the known consequences and other context allows the other person to define severity. It’s useful to share consequences from four perspectives: for you, for the person, for the team, and for the company. In general, this remains your viewpoint, but three out of four categories can be verified with others. Don’t start with:
 
@@ -246,7 +248,7 @@ When it’s hard to word feedback, take time to carefully review the other perso
 2.  Only after completing the first point, **share what you would like to see improved**. Be careful with your wording: _Not “this part is bad,” but “this could be improved.” Not “I didn’t like this,” but “it would be great if this could be changed.”_
 3.  **Explain what you would like to see changed**. Strengths and areas for improvement should be roughly balanced. If you genuinely liked the work, it’s okay to lean more towards the first point. Be sincere. However, if there are significantly more critical remarks, it can kill recipient’s mood or motivation. Feedback from someone who doesn’t know how to give it might look like this: _“I don’t like it. The code is unstructured. It’s hard to read. I don’t understand what it does.”_ This form of destructive criticism offers no direction for the partner. It remains unclear where to go next. Effective feedback: _“Andrew, I appreciate your punctuality. I like that you sent the task for review well in advance. I think if you separate the order payment and email sending blocks into isolated functions and rename variables according to this document (link), it would be great!”_ This feedback shows the partner their strengths and provides a direction for further work. The person knows what they can rely on and what still needs improvement.
 
-### … or even the simple formula
+### … or the simple formula
 
 The feedback formula in general looks like: _“[Person’s name], when you [describe action], it affects me/my work in this way [describe effect], and I would prefer [describe desired behavior].”_
 

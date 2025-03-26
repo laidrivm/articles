@@ -9,8 +9,7 @@ For a brief description check [the slides for incubators](/mellon-for-incubators
 ### Market
 
 ![Current market shares distribution map[8]](/mellon/1.png)
-
-Current market shares distribution map[8]
+*Current market shares distribution map[8]*
 
 The European password management market demonstrated 28% growth rate in 2019—2024. The demand for password management solutions in Europe is rising significantly due to:
 
@@ -19,26 +18,22 @@ The European password management market demonstrated 28% growth rate in 2019—2
 - The shift towards remote work has increased the number of online accounts and devices, necessitating secure password practices.
 
 ![Password management market considered to be quite competitive according to the Mordor Intelligence’s password management industry analytical report[3]](/mellon/2.png)
-
-Password management market considered to be quite competitive according to the Mordor Intelligence’s password management industry analytical report[3]
+*Password management market considered to be quite competitive according to the Mordor Intelligence’s password management industry analytical report[3]*
 
 Global password management market also offers a lot of opportunities. On the one hand, analysts forecast the global market growth from 14.3%[2] to 27.5%[3] yearly reaching $8 billion by 2030. On the other hand, it remains quite competitive and without dominant players[3] resulting in some tiny apps having hundreds of thousands USD revenue[1]. Despite of 38% of the current revenue shared in North America[8], reports show 30% projected growth rate in Pacific Asia[3] due to digital transformation and growing number of SMEs in the region[9], who face challenges in safeguarding sensitive information.
 
 ![Predicted market growth tempo map[3]](/mellon/3.png)
-
-Predicted market growth tempo map[3]
+*Predicted market growth tempo map[3]*
 
 This makes Asia and Pacific password management market expected to grow at the fastest CAGR over the forecast period. The market is driven by the growing number of small and medium-sized businesses in the region. Furthermore, an increasing number of technology users and continuously evolving infrastructure contribute to driving the market.
 
 ![Normalising response rate from [Security.org](http://Security.org)’s annual report[4] gives such a distribution of methods for managing multiple internet passwords](/mellon/4.png)
-
-Normalising response rate from [Security.org](http://Security.org)’s annual report[4] gives such a distribution of methods for managing multiple internet passwords
+*Normalising response rate from [Security.org](http://Security.org)’s annual report[4] gives such a distribution of methods for managing multiple internet passwords*
 
 In Portugal, the cybersecurity market is projected to grow by 7.75% annually between 2025 and 2029, reaching $239 million by 2029[5]. Despite this growth, Portugal faces a significant shortage of cybersecurity professionals, with a 30% job vacancy rate in the sector[6]. Password managers cover only 25%[4] of potential users considering indirect competitors: memorisation, paper or digital notes and browser storages. Mellon fills these gaps providing a solution for these individuals and SMEs who cannot afford dedicated security teams.
 
 ![Personal market is growing, but business market is growing even faster[4]](/mellon/5.png)
-
-Personal market is growing, but business market is growing even faster[4]
+*Personal market is growing, but business market is growing even faster[4]*
 
 ### Competitors features
 

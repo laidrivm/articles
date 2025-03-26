@@ -1,5 +1,7 @@
 # Guide: how to configure cheapest VM for a web service in Google Cloud
 
+Deploying a web service on Google Cloud can be costly and complex. In this guide, I’ll walk you through configuring the most budget-friendly virtual machine (VM) for a simple application. From creating a network to setting up a static IP and load balancer, follow these steps to get your service up and running efficiently.
+
 I’ve recently needed to deploy a Node.js application to use its endpoint as a webhook. I couldn’t simply access it by IP, so to avoid dealing with dynamic DNS, a static IP was needed. The company for which I developed this application already had another virtual machine on Google Cloud. So, to avoid adding complexity and multiple providers, I decided to set up a new VM there too.
 
 For those who have faced a similar context, I share this guide. It will help to choose the most cost-effective option among suitable ones and configure it for hosting a web application. I believe it would be helpful as far as VMs on Google Cloud are much more expensive than on other providers, and the configurations are more complex.
@@ -28,24 +30,21 @@ To handle the situation of recreation, we need to automatically boot the VM and 
 Google also releases a static IP if it was assigned to a deleted VM. To bypass this issue, we’ll use a Managed Load Balancer since the current load falls into the free tier.
 
 ![A diagram that shows how the solution looks like](/google-cloud-vms/1*QqgZhdykGQuSajWlZ4hK4Q.png)
-
-How it schematically looks like. Of course, network firewall filters not only incoming traffic, but also outcoming and inner one
+*How it schematically looks like. Of course, network firewall filters not only incoming traffic, but also outcoming and inner one*
 
 Now let’s move on to the specific steps.
 
 ## Create a network
 
 ![Screenshot of a creation of a new network in Google Cloud Console](/google-cloud-vms/1*2NyNXcKsgSZWHfh1z8xCQQ.png)
-
-Without a network, you won’t be able to proceed with the following steps
+*Without a network, you won’t be able to proceed with the following steps*
 
 Navigate to [VPC Network → VPC Networks → Create VPC Network](https://console.cloud.google.com/networking/networks/add). Choose the network name, it is OK to use “default” for the first network, enable automatic subnet creation mode, and include all suggested firewall rules.
 
 ## Create an instance template
 
 ![Screenshot of a creation of a new instance template in Google Cloud Console](/google-cloud-vms/1*esavJptlmgjHaJ4KC26EDA.png)
-
-In Google Cloud there are many entities. So I duplicate in the name what it is, specify the characteristics, and the template version. If you will have only one VM in the project, you can skip this complexity. In large projects, the name can become something like “it-n1-s1-spot-ubuntu-iowa-default-3”
+*In Google Cloud there are many entities. So I duplicate in the name what it is, specify the characteristics, and the template version. If you will have only one VM in the project, you can skip this complexity. In large projects, the name can become something like “it-n1-s1-spot-ubuntu-iowa-default-3”*
 
 Go to [Compute Engine → Instance Templates → Create an instance template](https://console.cloud.google.com/compute/instanceTemplates/add).
 
@@ -56,18 +55,15 @@ Surprisingly, n1 is the best tier in terms of the vCPU-RAM-Cost balance. The sit
 You can also compare costs in the [documentation](https://cloud.google.com/compute/all-pricing) and [pricing calculator](https://cloud.google.com/products/calculator). Here I’ll note once again that, in general, I don’t recommend renting VMs in Google Cloud because of their cost:
 
 ![Screenshot of a Hetzner admin panel with a creation of a new VM and it’s cost](/google-cloud-vms/1*RqMCaZzYj4P-fpQf2OsT2w.png)
-
-Just to compare, the cost of a dedicated VM at Hetzner with two vCPUs, 2GB RAM, 40GB SSD, and a static IP for a month is EUR 4.35
+*Just to compare, the cost of a dedicated VM at Hetzner with two vCPUs, 2GB RAM, 40GB SSD, and a static IP for a month is EUR 4.35*
 
 ![Two screenshots of a Google Cloud price calculator with equivalent VMs — one spot and one regular, and their costs](/google-cloud-vms/1*KQSezaMb6n9p951v7icOsQ.png)
-
-At Google, you would have to pay EUR 30.73 for a similar dedicated VM — 7 times more expensive! A Spot VM would cost “only” x3 — EUR 14.07
+*At GCP, you would have to pay EUR 30.73 for a similar dedicated VM — 7 times more expensive! A Spot VM would cost “only” x3 — EUR 14.07*
 
 Now, let’s return to the instance group settings. If you choose VM similar to n2-starndart-2 or more powerful, enable the confidential VM service. Otherwise, I believe this feature doesn’t worth such an upgrade — so just move on.
 
 ![Another screenshot of a creation of a new instance template — with the fields below regarding the previous one](/google-cloud-vms/1*n7ZS-6ebihXhGNhwFNscrw.png)
-
-In theory, you can deploy the container directly with the application on the VM. However, I decided to stick with a regular OS and run the container inside it
+*In theory, you can deploy the container directly with the application on the VM. However, I decided to stick with a regular OS and run the container inside it*
 
 Then, set up the boot disk. I chose the cheapest standard disk with the minimum allowable size of 10 gigabytes. For the image, I selected the familiar Ubuntu OS with the latest stable version 22.04 LTS x86/64.
 
@@ -97,8 +93,7 @@ There’s nothing particularly unique here: I update packages, install Docker us
 ## Set up a health check
 
 ![Screenshot of a creation of settings of a new health check](/google-cloud-vms/1*MaJViD42OoH3oWx6X9jMBg.png)
-
-Basically, a health check is a method of an application to determine externally, if it’s alive and working. In Google Cloud it is a corresponding automated check
+*Basically, a health check is a method of an application to determine externally, if it’s alive and working. In Google Cloud it is a corresponding automated check*
 
 Open [Compute Engine → Health checks → Create a health check](https://console.cloud.google.com/compute/healthChecksAdd).
 
@@ -109,8 +104,7 @@ In my application, the health check endpoint is available directly at the route 
 ## Create an Instance Group
 
 ![Screenshot of a creation of a new instance group](/google-cloud-vms/1*_jX9hGER4M_mK4wPXQU8Qg.png)
-
-I create stateless instance group as far as I have stateless app
+*I create stateless instance group as far as I have stateless app*
 
 Continue to [Compute Engine → Instance Group → Create instance group](https://console.cloud.google.com/compute/instanceGroups/add).
 
@@ -123,8 +117,7 @@ In the “Updates during VM instance repair” section, choose to update the ins
 After completing this, a VM should be automatically created, and your application will be deployed on it according to the scripts. You can check this by going to [Compute Engine → VM Instances](https://console.cloud.google.com/compute/instances) and connecting to the virtual machine via SSH.
 
 ![Screenshot of a created VM instance and how to access logs and monitoring sections from the user interface](/google-cloud-vms/1*9c7edWJl82y26c_ygQXAdg.png)
-
-You can also view the logs and metrics of a created VM — to check if everything goes as expected
+*You can also view the logs and metrics of a created VM — to check if everything goes as expected*
 
 If something isn’t working, it’s worth revisiting the steps above and taking time for debugging before going further. If the health check doesn’t work correctly, the balancer will continuously return “no healthy upstream”.
 
@@ -142,7 +135,7 @@ In the list of backends, choose to create a new backend. Change the type to “i
 
 For routing rules, leave it as a “simple host and path rule.” Proceed and create the load balancer.
 
-### Promote load balancer’s IP to static
+## Promote load balancer’s IP to static
 
 ![Screenshot showing how to promote IP address to static in the user interface](/google-cloud-vms/1*x7gNeNYMesLGOeGEHA-53g.png)
 
@@ -182,8 +175,7 @@ Now that’s it. But there are still things to improve in the current configurat
 -   Consider the “infrastructure as code” approach: set up Ansible, Terraform, or a more lightweight tool to manage infrastructure using declarative configurations stored on GitHub in a repository adjacent to the project’s code.
 
 ![A diagram showing improved version of the system](/google-cloud-vms/1*jFTT_RhOKlv_TtfR_tm2EQ.png)
-
-How improved system might look like. Health checks and firewall are omitted
+*How improved system might look like. Health checks and firewall are omitted*
 
 I have a question left to you, my dear reader. Have you ever used Google Cloud before? What tasks have you solved with it?
 

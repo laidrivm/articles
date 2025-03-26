@@ -1,5 +1,7 @@
 # What to do if you are not satisfied with your Tilda website performance?
 
+If you're struggling with poor website performance on Tilda, you're not alone.In this article, I’ll walk you through practical solutions — from maximizing Tilda’s capabilities to leveraging Cloudflare, using a static site generator with Tilda as a headless CMS, and even rethinking third-party script management. These steps will help you boost your site’s speed and user experience.
+
 A couple of weeks ago, the fellows from [Refocus](https://refocus.me/) reached out to me for a consultation. Refocus is an educational company operating in the Philippines and Indonesia. They don’t have their own IT products. Their website is built on Tilda. The company was upset with the page loading speed, and they had also nearly reached the engine’s limitations in terms of performance optimizations. Additionally, Tilda’s servers were located far from the region where the company primarily operates. Resolving this issue is critical for organic traffic growth and improving the user experience.
 
 I examined the case, explored options, and proposed the following, starting from the simplest and most obvious to the most labor-intensive:
@@ -17,12 +19,10 @@ I will explain these steps in detail, how the migration scheme might look, and w
 I suggested starting with implementing all the recommendations from [the official guide](https://help.tilda.cc/website-speed). It turned out that the company had already implemented a most of them, but they were still unsatisfied with the results:
 
 ![Screenshot from PageSpeed Insights](/tilda-website-performance/1*lhzejvVOY4xXkiBmU5_Arg.png)
-
-To make the results more accurate, it is worth measuring the performance from the the target region network
+*To make the results more accurate, it is worth measuring the performance from the the target region network*
 
 ![Screenshot from PageSpeed Insights with Web Vitals Metrics](/tilda-website-performance/1*Q_DPTkzfamU9SO7hw1iiCg.png)
-
-The values of user metrics appear even less satisfactory than the final score
+*The values of user metrics appear even less satisfactory than the final score*
 
 The next step was to address the issue with images. Despite [the Tilda’s announcement in August 2020](https://newsletter-en.tilda.cc/august2020) that loading adaptive images in modern formats became a default, all the images on the company’s website remained in PNG format. I suggested doing two things simultaneously:
 
@@ -48,12 +48,10 @@ Was needed something that would serve pages instead of Tilda. I recommended Clou
 Manually transferring a couple of pages from Tilda is possible, while mass export can be organized using handwritten scripts that use the Tilda API, Cloudflare API, and webhooks. These scripts can be hosted on a virtual machine. The company already has one, which was acquired along with the blog from outsorce developers. It can be schematically represented as follows:
 
 ![Scheme of the original state of the company’s services](/tilda-website-performance/1*62FoDnXiHMk2L7Dlojx8gQ.png)
-
-On the left — current state of the project. On the right — after migrating the first landing pages to Cloudflare
+*On the left — current state of the project. On the right — after migrating the first landing pages to Cloudflare*
 
 ![Screenshot from PageSpeed Insights after transferring first landing to Cloudflare](/tilda-website-performance/1*1rPA7sxw-SJD8Z4lAMMZ6g.png)
-
-Metrics of the test landing page after migration
+*Metrics of the test landing page after migration*
 
 Now the pages are delivered faster, caching can be configured, and the servers themselves are closer to the users.
 
@@ -68,8 +66,7 @@ The problems we still have:
 The next step here could be to redelegate the domain and switch to Cloudflare DNS. We will utilize more of the offered ecosystem and eliminate one external service. Additionally, we can use the Load Balancer, also provided by Cloudflare, to add another caching layer for Tilda pages and the blog hosted on a virtual machine in Singapore:
 
 ![The scheme after migration to Cloudflate DNS and usage of the Load Balancer](/tilda-website-performance/1*YRzTv_DkJYbXWWDbNZ-GAA.png)
-
-The most challenging stage. We’re going to make it simple with the further steps
+*The most challenging stage. We’re going to make it simple with the further steps*
 
 Now let’s solve the Tilda CDN issues. Its’ servers are still distant, and we cannot control caching. There are two options to deal with this:
 
@@ -79,8 +76,7 @@ Now let’s solve the Tilda CDN issues. Its’ servers are still distant, and we
 However, now we will also have to replace the addresses on the pages from [static.tildacdn.cc](http://static.tildacdn.cc/) and [neo.tildacdn.cc](http://neo.tildacdn.cc/) to our own cdn.domain.com, which requires import scripts to run through the entire HTML markup.
 
 ![The scheme after getting rid of Tilda CDN](/tilda-website-performance/1*pme34BD2egbiVmguy_zPoA.png)
-
-Tilda Engine still uploads assets to its’ CDN, but the company’s website use the version from Cloudflare CDN
+*Tilda Engine still uploads assets to its’ CDN, but the company’s website use the version from Cloudflare CDN*
 
 ## Using SSG and Tilda as a Headless CMS
 
@@ -101,8 +97,7 @@ Now let’s talk about optimization and content update of Tilda pages. What opti
 I suggested using Gatsby as the rendering engine. It is a framework designed for SSG, and it has a [ready-to-use plugin for working with Tilda](https://www.gatsbyjs.com/plugins/gatsby-source-tilda/). Next.js, which is used in to render the blog, is also suitable. On the one hand, it will require more time to integrate with Tilda. On the other, both applications will be on the same tech stack.
 
 ![](/tilda-website-performance/1*WZQayDARH7OF76BUCgBodw.png)
-
-Transitioning the main site to its own rendering engine built with Gatsby
+*Transitioning the main site to its own rendering engine built with Gatsby*
 
 ## Remove GTM and upload Third-Party Scripts to a CDN or use web workers to run them
 
