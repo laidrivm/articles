@@ -1,10 +1,10 @@
-![Article cover](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*IU3ce2DK2F_00e-LkiriXQ.png)
+![Article cover](/how-i-built-this-site-part-2/1*IU3ce2DK2F_00e-LkiriXQ.png)
 
 # What I learned by building blog further: Marked, Typograf and SEO
 
 For this update, I set up GitHub Actions and put some bash scripts to trigger on the VM. I also set up basic monitoring, added a few endpoints and tuned SEO. Finally, I got obsessed with typography which and ended up publishing a tiny related plugin. I’m here to reveal you the details!
 
-![Systems design scheme](https://miro.medium.com/v2/resize:fit:1400/1*yj20fooCmbuohpwc2MZPwQ.png)
+![Systems design scheme](/how-i-built-this-site-part-2/1*yj20fooCmbuohpwc2MZPwQ.png)
 *Systems design after the update*
 
 The article is huge, so I’d recommend to read the most interesting for you topics. I’ve split all the work into categories: bash scripts, GitHub actions, server-side code, media features, SEO enhancements, and loads of typography stuff. It will be helpful, if you’re developing any digital media, your personal site, using the same stack or yet making a research before a decision.
@@ -111,7 +111,7 @@ jobs:
 
 As articles isn’t a JS project, there’s no `package.json`. So, I had to initialise Bun right inside the runner and install dependencies using `bun add`. To update the repo, I simply execute terminal commands using environmental variables. To make it work, it’s required to add write rights to the token.
 
-![GitHub screenshot demonstrating UI to create a token](https://miro.medium.com/v2/resize:fit:1400/1*4Ws8zW5tVxaCRuOoHtY3Nw.png)
+![GitHub screenshot demonstrating UI to create a token](/how-i-built-this-site-part-2/1*4Ws8zW5tVxaCRuOoHtY3Nw.png)
 *Repository → Settings → Actions*
 
 At this point, I could set up a trigger to regenerate site pages on updates. First, a strait-forward solution restarting Docker container:
@@ -237,7 +237,7 @@ Official GitHub documentation is quite useful to write your own Actions. For ins
 
 Now with all these automations, we have to think about basic monitoring. We can’t afford to check manually if the site’s alive after yet another update. I like [Uptime Robot](https://uptimerobot.com/) and the free tier is enough to deal with it.
 
-![UptimeRobot screenshot with a set up monitoring rule](https://miro.medium.com/v2/resize:fit:1400/1*DFVZ5CZlI6rA6l_x8Cbs5A.png)
+![UptimeRobot screenshot with a set up monitoring rule](/how-i-built-this-site-part-2/1*DFVZ5CZlI6rA6l_x8Cbs5A.png)
 *Every 5 minutes the monitor will be checking the site and emailing you if it’ll be down*
 
 The only problem, this free tier only allows to check the availability using the `HEAD` HTTP-header. So I had to support it:
@@ -813,10 +813,10 @@ Briefly, it’s a tag that on any page of your site should be equal to the addre
 
 If you’re cross-posting your content somewhere else, like on blog platforms, it’s useful to set canonicals to the original page on your site.
 
-![dev.to screenshot with canoncical settings](https://miro.medium.com/v2/resize:fit:1400/1*z2UaI0uBhNPD97QrWldylg.png)
+![dev.to screenshot with canoncical settings](/how-i-built-this-site-part-2/1*z2UaI0uBhNPD97QrWldylg.png)
 *On [dev.to](https://dev.to/laidrivm) set it in the post options bar*
 
-![Medium screenshot with canonical settings](https://miro.medium.com/v2/resize:fit:1400/1*-E5KX1a2ZW1LuNPIoXuFBA.png)
+![Medium screenshot with canonical settings](/how-i-built-this-site-part-2/1*-E5KX1a2ZW1LuNPIoXuFBA.png)
 *On [Medium](https://medium.com/@laidrivm), set it in story settings → advanced settings*
 
 ### Set meta tags
@@ -841,7 +841,7 @@ On my site, the code looks for the first image of the page and uses it as an `o
 
 **OG type**. `<meta property="og:type" content="website" />`. As I know, [Schema.org](http://schema.org/) types are used here.
 
-![schema.org screenshot with the type tree](https://miro.medium.com/v2/resize:fit:1400/1*YqV-WYV4y2xP7BmWEI9HOg.png)
+![schema.org screenshot with the type tree](/how-i-built-this-site-part-2/1*YqV-WYV4y2xP7BmWEI9HOg.png)
 *I use a simple website type for now, but [there’s much more](https://schema.org/)*
 
 ### Generate sitemap
@@ -1051,7 +1051,7 @@ async function processLocalSource(
 
 To boost SEO, they also recommend to mention last modified date as a meta tag: `<meta name="last-modified" content="2025-03-16T12:00:00Z">` or even on the page itself: `<p>Last updated: <time datetime="2025-03-16">March 16, 2025</time></p>`.
 
-![Google Search Console screenshot](https://miro.medium.com/v2/resize:fit:1400/1*sFFfvb6kD1PaCa6Gl0VtJQ.png)
+![Google Search Console screenshot](/how-i-built-this-site-part-2/1*sFFfvb6kD1PaCa6Gl0VtJQ.png)
 
 ### Submit sitemap to Google Search Console
 
@@ -1074,7 +1074,7 @@ There are more detailed guides [by Google](https://developers.google.com/search
 
 ### Check web vitals metrics
 
-![Web vitals mobile performance test results](https://miro.medium.com/v2/resize:fit:1400/1*hGa5Cfy97XeWUMehvZcHiQ.png)
+![Web vitals mobile performance test results](/how-i-built-this-site-part-2/1*hGa5Cfy97XeWUMehvZcHiQ.png)
 *I’m satisfied with the results, considering I haven’t yet implemented any caches or image resizes*
 
 With the previous version, I had an issue of [PageSpeed Insights](https://pagespeed.web.dev/) failing by timeout to analyse any page of my site. And I, in turn, failed to google out what’s the reason behind it. Now it has just started to work even before submitting anything to GCS. No conclusions, just for you to know this might happen.
@@ -1095,12 +1095,12 @@ For now I serve them directly from server, but will certanly move them to a CDN.
 
 **Ligatures**. This is the property of the font to combine some sets of characters so that their parts do not overlap. I also like it visually. CSS rule `text-rendering: optimizeLegibility`.
 
-![Difference with and without ligatures](https://miro.medium.com/v2/resize:fit:1200/1*5LJnBmMeLzIS2QhWckQZ6A.png)
+![Difference with and without ligatures](/how-i-built-this-site-part-2/1*5LJnBmMeLzIS2QhWckQZ6A.png)
 *No ligature in odd rows, with ligatures — in even, [CreativePro](https://creativepro.com/typetalk-standard-vs-discretionary-ligatures/)*
 
 **Kerning**. This is also a font property to combine some character sets. This time, to adapt the distance between them. Mainly, to reduce it and avoid weird gaps. Imho, it looks better too. Turns on with the same CSS rule.
 
-![Difference wuth and without kerning](https://miro.medium.com/v2/resize:fit:1000/1*0sNYJ2sDYRAhyzwuPd-bPw.png)
+![Difference wuth and without kerning](/how-i-built-this-site-part-2/1*0sNYJ2sDYRAhyzwuPd-bPw.png)
 *Kerning comparision, [Wikipedia](https://en.wikipedia.org/wiki/Kerning)*
 
 **Font sizes**. It sets the visual hierarchy: `<h1>` is bigger than `<h2>`, bigger than `<p>`. We read texts on the web from large monitors or large smartphone screens. Usually, we do this at some distance — at least a half-bent arm. It is worth choosing a size so that this distance does not have to be increased or decreased in order to view your site. I settled it this way:
@@ -1175,7 +1175,7 @@ In the case of hover, I add a background. I found this to be a good way to highl
 
 **Captions for images**. This is a common publications platform functionality I decided to support as well. Simple caption is traditionally places right under the illustration and has smaller font-size comparing to the main text. It’s alignment might also differ and depends on the image layout.
 
-![A yacht with details captioned](https://miro.medium.com/v2/resize:fit:1400/1*-yvaHH2VvYKAQazH-UmcUQ.png)
+![A yacht with details captioned](/how-i-built-this-site-part-2/1*-yvaHH2VvYKAQazH-UmcUQ.png)
 *There are some libraries to create detailed captions on websites, but usually those are parts of an illustration*
 
 Image captions might be optional, if the illustration is clear itself or is described by a header or text nearby.
@@ -1205,7 +1205,7 @@ Not to talk about minuses −, which are a part of other typography section, mat
 
 There’s also a separate ellipses sign “…” which differs three dots, is used to indicate an omission in quoted material, and is not broken on separate stings.
 
-![Wikipedia screenshot with quotation marks typography rules in different languages](https://miro.medium.com/v2/resize:fit:1400/1*i-5BDb1SYFyTCal6_AL11A.png)
+![Wikipedia screenshot with quotation marks typography rules in different languages](/how-i-built-this-site-part-2/1*i-5BDb1SYFyTCal6_AL11A.png)
 *A table with only quotation mark rules is 12 screens height, [Wikipedia](https://en.wikipedia.org/wiki/Quotation_mark)*
 
 **Line breaks**. They are set automatically depending on the alignment and justification, and may cause words to break either on some breakpoints. The shorter the lines are, the more actual becomes hyphenation, as there are less options to set a break point, causing weird breaks or column bounds overlaps.
@@ -1235,7 +1235,7 @@ The idea is to optically align the text at the border of the column: some charac
 
 The problem is that it works fine on the web only with the first character of the block. If at some breakpoint the character is in the middle of the text, it won’t hang. Only if you’ll try to calculate it’s position in the line on the client, which, imho, is not worth the developer’s effort and computing resources. You can’t count on the `hanging-punctuation` property either — [it only works in Safari, and even then, poorly](https://caniuse.com/css-hanging-punctuation).
 
-![A page of a renaissance latin book](https://miro.medium.com/v2/resize:fit:1400/1*TrBFV7P7u34f-naIcfKlZA.png)
+![A page of a renaissance latin book](/how-i-built-this-site-part-2/1*TrBFV7P7u34f-naIcfKlZA.png)
 *Letters alignment in Miscellanea Astronomica, [Vatican Library](https://digi.vatlib.it/view/MSS_Barb.lat.77)*
 
 Finally, in the classic version, not only punctuation marks are aligned, as is usually done on the web, but all the symbols. That’s something should be made a combination of font and browser features, not on the website level.
@@ -1250,7 +1250,7 @@ That’s nearly it with typographic theory. We haven’t even discussed the spac
 - The line spacing should be smaller than the distance between paragraphs
 - The margins inside a block should be smaller than the margin to another block
 
-![Wikipedia screenshot with a contributor photo and an angel of death caption](https://miro.medium.com/v2/resize:fit:1200/1*AW2c6Gf-QXJMHPYVVOESIg.png)
+![Wikipedia screenshot with a contributor photo and an angel of death caption](/how-i-built-this-site-part-2/1*AW2c6Gf-QXJMHPYVVOESIg.png)
 *Don’t break the rules — or she will come after you, [the Atlantic](https://www.theatlantic.com/technology/archive/2011/12/i-love-wikipedia-but/249314/)*
 
 That’s something you should always keep in mind. Breaking this rule ruins things. At best, the layout will be looking untidy. At worst, it will cause misunderstanding incidents, as our brain will match some elements, that were not supposed to be matched in a common sense.
@@ -1355,7 +1355,7 @@ if (opts.customRules) {
 
 I planned to add a very specific rule. There are tags that contain text. If there are several words in this text, then there should always be a non-breaking space before the last one. The word itself should be wrapped in `<span>`, which prohibits hyphenation. Punctuation marks that are adjacent to the word counts as parts of word.
 
-![Screenshot of a header broken on two lines](https://miro.medium.com/v2/resize:fit:1400/1*pQD5oF4e-dIFfrM0FF-qTg.png)
+![Screenshot of a header broken on two lines](/how-i-built-this-site-part-2/1*pQD5oF4e-dIFfrM0FF-qTg.png)
 *Something like this popped up because of the last word hyphenation or space wrap*
 
 All Typograf rules I saw were written using regular expressions. This is okay for simple cases, but even LLMs couldn’t help me here. I gave up on the 40-character regexp and brought in [parse5](https://github.com/inikulin/parse5) to process the text using a tool which understands it’s syntax. Although, I still couldn’t avoid regexps.
@@ -1544,7 +1544,7 @@ Subjectively, extending typograf with custom rules turned out to be not as easy 
 
 I haven’t figured out all the capabilities of the tool yet — for example, there are `onBeforeRule` and `onAfterRule` hooks. But anyway, I think to give [Richtypo](https://github.com/sapegin/richtypo.js) a try for the next update — to compare and decide if I should use it instead. Maybe it’s easier to learn and to extend.
 
-![Frodo Baggins trying to read regexp on the One Ring](https://miro.medium.com/v2/resize:fit:1400/1*gUELh4iPU_KJzWGRBBOOcA.jpeg)
+![Frodo Baggins trying to read regexp on the One Ring](/how-i-built-this-site-part-2/1*gUELh4iPU_KJzWGRBBOOcA.jpeg)
 *Me, always*
 
 ### Caption images and highlight lead paragraphs using Marked
