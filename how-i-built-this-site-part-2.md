@@ -11,7 +11,7 @@ The article is huge, so I’d recommend to read the most interesting for you top
 
 You may check the results while reading this article or look at [the source code on GitHub](https://github.com/laidrivm/laidrivm.com).
 
-> This is the second part of a saga where I’m developing my own site with modern JS tools. You might be interested to check [the first part](https://laidrivm.com/how-i-built-this-site-part-1) as well, where I kick of the project with Bun, Elysia, JSX and Preact, while also setting up the environment using ESLint, ESBuild, Docker and a Hetzner VM.
+> This is the second part of a saga where I’m developing my own site with modern JS tools. You might be interested to check [the first part](https://laidrivm.com/how-i-built-this-site-part-1) as well, where I kick off the project with Bun, Elysia, JSX and Preact, while also setting up the environment using ESLint, ESBuild, Docker and a Hetzner VM.
 
 ## Bash scripts
 

@@ -6,6 +6,8 @@ For a couple of months I’ve wanted to create a self-hosted blog in addition to
 
 In this article, I’ll discuss these tools and why I chose them: pros, cons, the challenges I met and how I solved them. We’ll come across development and publication of a tiny blog. We’ll also discuss the current state of the modern JS stack. Spoiler: the JS stack is still cursed, and using technologies above in commercial production is questionable. At the end, I’ll share my vision, how the site can be further developed.
 
+> This is the first part of a saga where I’m developing my own site with modern JS tools. You might be interested to check [the second part](https://laidrivm.com/how-i-built-this-site-part-2) as well, where I set up GitHub Actions and basic monitoring, write bash scripts and a few endpoints, enhance SEO and typography.
+
 ## Static site
 
 First, why did I decide to create a static site?
