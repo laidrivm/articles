@@ -425,7 +425,7 @@ if (import.meta.hot) {
 That stuff was great for development, but [it couldn’t yet be built for production](https://bun.sh/docs/bundler/fullstack#this-is-a-work-in-progress). The closest result writing custom Bun Bundler scripts — were two index.html files: the one with correctly set assets and the other that was actually served by server.
 
 ![The results of the bundling: files, their types and sizes](/how-i-built-mellon-part-1/1*0iltYnoOU3kgNjLaJ86RAQ.png)
-I could adjust paths and naming by yet another script, but it seemed a non-scalable approach
+*I could adjust paths and naming by yet another script, but it seemed a non-scalable approach*
 
 ### Caching service worker
 
@@ -864,7 +864,7 @@ export async function initializeRemoteDb(
 … and it also throws an error, in browser console this time:
 
 ![A 404 error caused by PouchDB trying to establish sync with CouchDB](/how-i-built-mellon-part-1/1*hLKhSASge10z7iNX2Oj1NQ.png)
-Despite the error has a followup text, it still looks clumsy
+*Despite the error has a followup text, it still looks clumsy*
 
 I don’t like that `await remoteDB.info()` returns 404 if it tries to establish the connection before the corresponding DB becomes fully functional on a server — as it is called shortly after the DB is created. Yet I dunno how to solve it without trying to connect after a small timeout.
 
