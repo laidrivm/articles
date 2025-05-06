@@ -1769,6 +1769,8 @@ Above that, I wrote out to:
 
 Sounds like a right fit for a couple of beer evenings.
 
+----------
+
 If you found this article helpful, please show your support by sharing it with your friends or colleagues. This time there are some buttons to do it.
 
 If you want to talk on managing engineering teams, designing systems, or improving your tech product, [send an email](mailto:laidrivm@gmail.com) or [message me](https://t.me/laidrivm).
