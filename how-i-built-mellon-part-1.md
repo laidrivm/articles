@@ -1,4 +1,4 @@
-![Article cover](https://cdn-images-1.medium.com/max/1600/1*NX3jPVljK4KNFgOv1Pj6oQ.jpeg)
+![Article cover](/how-i-built-mellon-part-1/1*NX3jPVljK4KNFgOv1Pj6oQ.jpeg)
 
 # Building a local-first web application with Bun, React, Tailwind CSS, PouchDB and CouchDB
 
@@ -85,7 +85,7 @@ Sync engine connects client and server to track changes and distribute them. It 
 
 ### Community
 
-![Local-first software development website mainpage's screenshot](https://cdn-images-1.medium.com/max/1600/1*GxSTbG88iw0ubVkmA7KTaw.png)
+![Local-first software development website mainpage's screenshot](/how-i-built-mellon-part-1/1*GxSTbG88iw0ubVkmA7KTaw.png)
 
 I guess, the main site related to the approach is [localfirstweb.dev](https://localfirstweb.dev/). There you can find articles and videos about the approach, join a Discord community of 3500 members, find information about past and upcoming events, know some minds to follow or apps to try.
 
@@ -221,7 +221,7 @@ Finally, about the tools I plan to use for sure, but haven’t include into the 
 
 ## How the system is designed
 
-![Systems design scheme](https://cdn-images-1.medium.com/max/1600/1*VhqHU7-wARE-JfhAyv8JFw.png)
+![Systems design scheme](/how-i-built-mellon-part-1/1*VhqHU7-wARE-JfhAyv8JFw.png)
 
 I tried to keep the simplest possible architecture for the prototype. Bun server initially serves everything. Then, a service worker is registered and starts to intercept all the requests, responding itself from caches or readdressing it to server if missed or excepted. All the client data is stored in PouchDB. When connected to network, the app establishes a background data sync with CouchDB instance on a server.
 
@@ -231,10 +231,10 @@ That’s pretty it. As I rely on a default “last write wins” conflict resolu
 
 ### User Interface
 
-![](https://cdn-images-1.medium.com/max/1600/1*X9Q99AvlQP0ViznaL5wueg.png)
+![](/how-i-built-mellon-part-1/1*X9Q99AvlQP0ViznaL5wueg.png)
 *The initial UI layout from Figma*
 
-![](https://cdn-images-1.medium.com/max/1600/1*AkeTY0Cb1GjyxMsGroBL9g.png)
+![](/how-i-built-mellon-part-1/1*AkeTY0Cb1GjyxMsGroBL9g.png)
 *The actual UI with a fronted components decomposition*
 
 Now to nested component structure. The App component loads secrets, master password and email, keeps the onboarding state, controls activity to trigger a lock. Inside it there are:
@@ -424,7 +424,7 @@ if (import.meta.hot) {
 
 That stuff was great for development, but [it couldn’t yet be built for production](https://bun.sh/docs/bundler/fullstack#this-is-a-work-in-progress). The closest result writing custom Bun Bundler scripts — were two index.html files: the one with correctly set assets and the other that was actually served by server.
 
-![The results of the bundling: files, their types and sizes](https://cdn-images-1.medium.com/max/1600/1*0iltYnoOU3kgNjLaJ86RAQ.png)
+![The results of the bundling: files, their types and sizes](/how-i-built-mellon-part-1/1*0iltYnoOU3kgNjLaJ86RAQ.png)
 I could adjust paths and naming by yet another script, but it seemed a non-scalable approach
 
 ### Caching service worker
@@ -863,7 +863,7 @@ export async function initializeRemoteDb(
 
 … and it also throws an error, in browser console this time:
 
-![A 404 error caused by PouchDB trying to establish sync with CouchDB](https://cdn-images-1.medium.com/max/1600/1*hLKhSASge10z7iNX2Oj1NQ.png)
+![A 404 error caused by PouchDB trying to establish sync with CouchDB](/how-i-built-mellon-part-1/1*hLKhSASge10z7iNX2Oj1NQ.png)
 Despite the error has a followup text, it still looks clumsy
 
 I don’t like that `await remoteDB.info()` returns 404 if it tries to establish the connection before the corresponding DB becomes fully functional on a server — as it is called shortly after the DB is created. Yet I dunno how to solve it without trying to connect after a small timeout.
