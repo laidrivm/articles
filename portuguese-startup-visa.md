@@ -1,4 +1,4 @@
-![](https://cdn-images-1.medium.com/max/1600/1*EBHrpqq7T33Ad4ZI6f3YRQ.png)
+![](/portuguese-startup-visa/1*EBHrpqq7T33Ad4ZI6f3YRQ.png)
 
 # Guide to Portugal Startup Visa: Obtaining an IAPMEI Confirmation Letter in 2025
 
@@ -6,7 +6,7 @@ In February 2025, I applied with [my project](/mellon) to IAPMEI — a Port
 
 In April 2025, I created [a prototype](https://mellon.laidrivm.com/) to demonstrate project updates. In May 2025, I was asked to provide additional documents. The final result is still unknown, but the fact that the application wasn’t immediately rejected is considered a good sign.
 
-![](https://cdn-images-1.medium.com/max/1600/1*DPEhHT9Qp-4m8BU8dbhCIw.png)
+![](/portuguese-startup-visa/1*DPEhHT9Qp-4m8BU8dbhCIw.png)
 
 The process of obtaining temporary Portuguese residence through a startup is long, complex, and surrounded by contradictory information. It took me two months — one of them full-time — just to prepare the documents for the initial application and submit them via the IAPMEI platform. Yet, it remains easier and more affordable comparing to Spain or Finland startup programmes.
 
@@ -19,7 +19,7 @@ This guide covers the process starting from the moment you’ve already decided 
 
 If I cover those topics later, I’ll cross-link the related articles. For now, here’s what remains within the scope of this guide:
 
-![](https://cdn-images-1.medium.com/max/1600/1*UvgU9fUHT-czj4YxW8k53w.png)
+![](/portuguese-startup-visa/1*UvgU9fUHT-czj4YxW8k53w.png)
 
 This guide is based on my experience and includes examples from my own application. I focus only on the aspects essential for the application. That means some business-related decisions might not reflect how you would build and develop a real startup — and that’s okay. No one will force you to execute everything exactly as described. But aligning with the formal structure will increase your chances of approval.
 
@@ -62,7 +62,7 @@ Founders can list their spouses as co-founders — or not. This can help opt
 
 ## I. Registration on the Platform
 
-![](https://cdn-images-1.medium.com/max/1600/1*IAamcHXUaAqRv_QHEYimCw.png)
+![](/portuguese-startup-visa/1*IAamcHXUaAqRv_QHEYimCw.png)
 
 The journey begins at [IAPMEI’s platform](https://webapps.iapmei.pt/StartupVisa/VisaEmp/Account/Login.aspx), which is localized in English — a welcome convenience. Registration is simple: you enter your (foreign) passport number, issuing country, full name, phone number, and create a password. Then confirm your email — and you’re in. Use only a personal email address — don’t use a work or project-related one.
 
@@ -82,13 +82,13 @@ The platform lists the contact email [startup.visa@iapmei.pt](mailto:startup.vis
 
 Back on the IAPMEI portal, click “Access” — the orange button in the top right corner:
 
-![](https://cdn-images-1.medium.com/max/1600/1*lAzUzfW5YsWii2nx9ieSCw.png)
+![](/portuguese-startup-visa/1*lAzUzfW5YsWii2nx9ieSCw.png)
 
 There, you can create a new application — which we’ll be working with from here on.
 
 ## II a. Startup Description
 
-![](https://cdn-images-1.medium.com/max/1600/1*9aAjHEwujdql0cIJnzV89A.png)
+![](/portuguese-startup-visa/1*9aAjHEwujdql0cIJnzV89A.png)
 
 At this stage, the process mainly consists of filling in web forms. Text areas have a 2,500-character limit, so you’ll need to trim your content to fit. Extra characters are automatically cut off.
 
@@ -128,7 +128,7 @@ Don’t forget to mention that you comply with GDPR and other things that are im
 
 ### Designation of the Project
 
-![](https://cdn-images-1.medium.com/max/1600/1*ZPHo9x1CoWJZSpIPvZu1gg.png)
+![](/portuguese-startup-visa/1*ZPHo9x1CoWJZSpIPvZu1gg.png)
 
 This is your project’s brand name — how IAPMEI will refer to you. Choose something short and recognizable. I used my product name and slogan: **Mellon — Keep your secrets**. Inspired by The Lord of the Rings and a related meme, I thought it was fitting for a password manager — the product I applied with.
 
@@ -198,14 +198,14 @@ You might consider the motivational letter as the briefest abstract of your whol
 > 
 > Portugal is the ideal launchpad for Mellon due to its thriving startup ecosystem, strategic government initiatives for innovative entrepreneurship, and its open, welcoming cultural and legal environment (like Law no. 21/2023) for foreign founders. Incubators like IPStartUp or Startup Leiria, which partner with universities, provide unique opportunities for collaboration and growth. We love Portugal as a place to live and work because of the climate, nature, and talented people we have met while visiting your country as tourists. Having managed legal entities in Russia, Serbia, and Montenegro, we evaluate Portugal as the location we wish to develop and launch Mellon. We hope to contribute back to the Portuguese economy and society by creating an innovative company with high-qualified job openings and exporting a well-known cybersecurity product and awareness programs.
 > 
-> ![The footer of the letter with a space for signatures, further readings and a qr code](https://cdn-images-1.medium.com/max/1600/1*TEzhM8BPZeMWLfQ8hPY_Iw.png)
+> ![The footer of the letter with a space for signatures, further readings and a qr code](/portuguese-startup-visa/1*TEzhM8BPZeMWLfQ8hPY_Iw.png)
 
 
 Again, I mention a link to the full text and even a QR code — as you’ll attach a signed scan and the classical link won’t be clickable. [The original unsigned Google Doc](https://docs.google.com/document/d/1KjI77R_OVeEjeBemoRmVcV9Gxv8Huroowv6o2R7ocz8/edit?tab=t.0).
 
 ### The innovative nature of the product or service
 
-![](https://cdn-images-1.medium.com/max/1600/1*zJWutwNh1MSbuDM__MTo9A.png)
+![](/portuguese-startup-visa/1*zJWutwNh1MSbuDM__MTo9A.png)
 
 Next, we move to the Entrepreneurial Project section. Here you reveal more details on each key aspect by which the project will be assessed.
 
@@ -344,13 +344,13 @@ It is expected that you’ll create at least 10 openings in these two years. Tha
 - UX Researcher, Master, 2027
 - Data Analyst, Master, 2027
 
-![](https://cdn-images-1.medium.com/max/1600/1*1qW32aBGxWgNxBLp0Au2FQ.png)
+![](/portuguese-startup-visa/1*1qW32aBGxWgNxBLp0Au2FQ.png)
 
 ### Justification of job creation potential
 
 That will be a tough one. Each bachelor and master will cost you. That means you have to show in your financial model how you’re going to pay them. So, it’s time to create one. I made [my own version of the model](https://docs.google.com/spreadsheets/d/15M55fycYUv009NIfZJQrFvLoNCnASicz6AkxnT4PLz4/edit?gid=0#gid=0), but I also have [a link to another one](https://docs.google.com/spreadsheets/d/1x_X8BBgQPb7RXzc4tqo7CDx4sUTTFNktXt81NLsNJb4/edit?gid=1452304861#gid=1452304861), shared by a founder of an approved startup. Though it’s not necessary to break it down by month — startups with yearly breakdowns were also approved.
 
-![](https://cdn-images-1.medium.com/max/1600/1*8XbZBSUfAfgyks1O-hiwIQ.png)
+![](/portuguese-startup-visa/1*8XbZBSUfAfgyks1O-hiwIQ.png)
 
 I tried to show that we’re going to bootstrap the product only with the financial means of the founders, not relying on any investments. That’s not the only option — you may also describe everything in such a way that you will need investments. But, as a result, you will have to write down where you will get them from: how you will look for investors, what sums and when you expect to raise, and what you will give in return.
 
@@ -522,13 +522,13 @@ That’s it for the project description. Now, we move to the next big chapter: d
 
 ## II b. Documents for entrepreneurs
 
-![](https://cdn-images-1.medium.com/max/1600/1*NDMLq0W8pq8BU7HY30yvmA.png)
+![](/portuguese-startup-visa/1*NDMLq0W8pq8BU7HY30yvmA.png)
 
 Before we get into the details, here’s what’s important. All the applicants must provide the necessary documents on time, including the additional requests. If someone decides not to send new documents and disappears during the application process, all the applicants will be rejected together.
 
 Open the entrepreneurs page. That’s where you can edit your own information and add other founders.
 
-![](https://cdn-images-1.medium.com/max/1600/1*Bh5yiPgsPFGyS-afpXCh1A.png)
+![](/portuguese-startup-visa/1*Bh5yiPgsPFGyS-afpXCh1A.png)
 
 First, fill in all the basic info:
 
@@ -611,7 +611,7 @@ If you have a NIF or NISS, that is also fine, but you need:
 
 To authorise IAPMEI for online checking at [Tax Authority](https://www.portaldasfinancas.gov.pt/) and Social Security, you need to grant them permissions on the respective portals. For that purpose, IAPMEI’s tax identification number is 501373357, and the Social Security number is 20004578827.
 
-![](https://cdn-images-1.medium.com/max/1600/1*A3V34hq-HS5qYYPsDaEtSA.png)
+![](/portuguese-startup-visa/1*A3V34hq-HS5qYYPsDaEtSA.png)
 
 Merge all the documents into a single PDF and attach it to the field “Add declaration of tax …”.
 
@@ -625,7 +625,7 @@ If degrees are issued by a country that follows the Hague Convention of 1961, it
 
 Attach a CV in English or Portuguese. I used the same one I use for job hunting:
 
-![](https://cdn-images-1.medium.com/max/1600/1*YEnKfsym8YmlXM7v4GLH3w.png)
+![](/portuguese-startup-visa/1*YEnKfsym8YmlXM7v4GLH3w.png)
 
 The main thing is that it should be up to date when you apply to IAPMEI. It’s fine if you’re working consistently anywhere. It just should not mention the project you’re applying with.
 
@@ -671,7 +671,7 @@ I wrote out all these points while studying cases of refusals in the community. 
 
 ### Contacting the incubators
 
-![](https://cdn-images-1.medium.com/max/1600/1*QuEko9mN6iXaLRH_pan5Dw.png)
+![](/portuguese-startup-visa/1*QuEko9mN6iXaLRH_pan5Dw.png)
 
 As you submit the docs, go to the Incubator’s declarations page. There find the Incubator’s list button, it will open a popup. There hit the Search button to list all the incubators. All of them are authorized to work under the startup visa program, so you don’t have to additionally check them.
 
@@ -685,7 +685,7 @@ I plan to move to Lisbon suburbs: somewhere like Cascais or Mafra. So I looked f
 
 I also looked for incubators whose business areas align with my startup categories. You can check them by clicking the incubator’s name in the search results.
 
-![](https://cdn-images-1.medium.com/max/1600/1*_aPATr339A7ZCOKx_xzc3A.png)
+![](/portuguese-startup-visa/1*_aPATr339A7ZCOKx_xzc3A.png)
 
 I picked 10 incubators for the first wave. And in two weeks I got only 1 approval (a week after) and 9 rejections. I bet that’s because I did not make any slides to attach to the applications. In the form it’s considered optional but it seems like it significantly influences the decision. Don’t repeat my mistake and create your slides before applying to incubators.
 
@@ -697,7 +697,7 @@ I also know folks who wrote to the incubators by email in advance. According to 
 
 I also had a call with one of the incubators, even though they immediately approved and issued a confirmation letter:
 
-![](https://cdn-images-1.medium.com/max/1600/1*uZekL2-sv1BnbuM1pqz3Xw.png)
+![](/portuguese-startup-visa/1*uZekL2-sv1BnbuM1pqz3Xw.png)
 
 During the call, the representative shared some info about their incubator and the program itself:
 
