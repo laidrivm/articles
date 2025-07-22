@@ -7,6 +7,5 @@
 -   [Гитхаб](https://github.com/laidrivm)
 -   [Телеграм](https://t.me/laidrivm) и [канал там](https://t.me/laidrivm_pub)
 -   [Написать на почту](mailto:laidrivm@gmail.com)
--	[Резюме](/cv-vladimir-lazarev-engineering-director.pdf)
+-   [Резюме](/cv-vladimir-lazarev-engineering-director.pdf)
 
-## Статьи

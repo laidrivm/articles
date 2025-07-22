@@ -13,13 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     environment: prod
     steps:
-      - name: Execute remote commands via SSH to update
-        uses: appleboy/ssh-action@v1.2.2
-        with:
-          host: ${{ secrets.VM_HOST }}
-          port: ${{ secrets.VM_PORT }}
-          username: ${{ secrets.VM_USERNAME }}
-          key: ${{ secrets.VM_SSH_KEY }}
-          passphrase: ${{ secrets.VM_SSH_PHRASE }}
-          script: |
-            sudo ./deploy.sh
+      - name: Trigger website regeneration
+        run: |
+          curl -X POST \
+            -H "Authorization: ${{ secrets.API_AUTH_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -f \
+            ${{ secrets.API_BASE_URL }}/api/v1/regenerate
