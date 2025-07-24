@@ -392,10 +392,10 @@ Honestly, it makes me sad to see the efforts required just to find a decent job.
 
 ----------
 
-If you found this article helpful, please show your support by clapping, sharing it with your friends or colleagues, and subscribing to receive notifications for my new posts.
+If you found this article helpful, please show your support by sharing it with your friends or colleagues.
 
-If you want to talk on managing engineering teams or departments, designing systems, or improving your technical product, email me at [laidrivm@gmail.com](mailto:laidrivm@gmail.com) or message me on [https://t.me/laidrivm](https://t.me/laidrivm).
+If you want to talk on managing engineering teams, designing systems, or improving your tech product, [send an email](mailto:laidrivm@gmail.com) or [message me](https://t.me/laidrivm).
 
-Feel free to connect with me on LinkedIn at [https://www.linkedin.com/in/vladimir-lazarev/](https://www.linkedin.com/in/vladimir-lazarev/).
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/vladimir-lazarev/).
 
 Peace!
