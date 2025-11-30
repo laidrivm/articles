@@ -1,6 +1,6 @@
 # What I’m doing now
 
-## Working as a Head of Engineering at Mojam
+## Working as a Head of Engineering
 
 Still hiring [a Vue front-end lead](https://mojam.co/careers/front-end-team-lead/), and [a senior PHP/Laravel back-end engineer](https://mojam.co/careers/senior-php-developer-2/). If you speak Russian and meet the criteria, please apply.
 
@@ -54,6 +54,6 @@ Although they are trying to cancel Vera for [her interview](https://www.youtube.
 
 ---
 
-Written in Belgrade, Serbia, where after the clock change it gets dark at 15:30 pm, brilliant.
+Written in Belgrade, Serbia, where after the clock change it gets dark at 15:30, brilliant.
 
 Inspired by [Derek Sivers](https://sive.rs/nowff). [Other now pages](https://nownownow.com/).
