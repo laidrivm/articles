@@ -1,6 +1,6 @@
 # Vladimir Lazarev
 
-Sowftware engineering leader. Develop staff, teams, and processes, aligning them with business needs. Create websites and mobile apps, set up infrastructure. Live in Belgrade, Serbia.
+Head of Engineering at Mojam. Develop staff, teams, and processes, aligning them with business needs. Create websites and mobile apps, set up infrastructure. Reside in Sesimbra, Portugal.
 
 -   [LinkedIn](https://www.linkedin.com/in/vladimir-lazarev/)
 -   [Medium](https://medium.com/@laidrivm)
