@@ -1,4 +1,4 @@
-![Article cover](https://cdn-images-1.medium.com/max/2600/1*bmwBmgK0IPrS6vMVtEBo5w.png)
+![Article cover](/my-daily-planner/1*bmwBmgK0IPrS6vMVtEBo5w.png)
 
 # How I Run My Daily Planner
 
@@ -29,7 +29,7 @@ I'll also share my template — and materials to dive deeper into the topic: des
 
 Every day I wake up, brush my teeth, make coffee, open my laptop and see this:
 
-![Checklist for 2nd January](https://cdn-images-1.medium.com/max/1600/1*mGZPcBNQWIZbFu4tPiVqVg.png)
+![Checklist for 2nd January](/my-daily-planner/1*mGZPcBNQWIZbFu4tPiVqVg.png)
 
 I start doing things from top to bottom. Things with a time — at that time. Everything else — in the remaining time. In between — I try to rest, eat, and hug my wife. What I've done — I check off. What I haven't — I reschedule to other days or to the buffer. Before sleep, I prep tasks for tomorrow and go to bed. And so on — every day.
 
@@ -61,7 +61,7 @@ My time is linear, I can only focus well on one thing at a moment. So I manage m
 
 There should be only one focus at a time. If something else claims the focus spot, choose one and move everything else to the next week. If I already closed the focus mid-week, okay, only then I can add a second one:
 
-![Example of weekly focus](https://cdn-images-1.medium.com/max/1600/1*rFiyh22hx0HJITFwc8oMVA.png)
+![Example of weekly focus](/my-daily-planner/1*rFiyh22hx0HJITFwc8oMVA.png)
 
 **Decompose**. All tasks in the list are those I can do in one turn. If I can't — I split them into subtasks. If I don't understand how — I split them into subtasks. If I got interrupted — I write down what I did and what's left to do (well, yeah, I split them into subtasks).
 
@@ -129,7 +129,7 @@ Sometimes I forget to write something down. Or I temporarily write tasks in save
 
 **Project documents**. I lied a bit: there's a second place with lists of decomposed tasks. The planner is a log broken down by days. But I can't plan all tasks by days in advance, and dragging huge lists of project tasks from one week to another is exhausting. So each project: an activity that's more than a week's worth — has its own document with its own task backlog.
 
-![Screenshot of document storage](https://cdn-images-1.medium.com/max/1600/1*Nrg2wJi9DhYYQr1FUbXjsw.png)
+![Screenshot of document storage](/my-daily-planner/1*Nrg2wJi9DhYYQr1FUbXjsw.png)
 
 In the planner I might write something like "work on project X (link)". This means the project has its own detailed task list — and I just need a little nudge to switch and start doing them. Yes, this approach breaks the "in one place" and "the less thinking later the better" rules — but for a reason.
 
@@ -149,7 +149,7 @@ The number itself can vary with tasks too. If there are shitty tasks or lots of 
 
 So it might be a good idea to organise meeting-free days for yourself, and for these days to be not only on weekends. It can also help to reserve blocks of several hours in the calendar to focus.
 
-![Screenshot with links to planner archives from 2018 to 2026](https://cdn-images-1.medium.com/max/1600/1*ktbva-z26XbwfQN7kNgMSQ.png)
+![Screenshot with links to planner archives from 2018 to 2026](/my-daily-planner/1*ktbva-z26XbwfQN7kNgMSQ.png)
 
 **Year log dump**. Every week I move completed tasks to a separate document, something like Completed Tasks 2025. Archieved tasks don't distract. Besides, this helps me in three cases:
 
@@ -163,7 +163,7 @@ So it might be a good idea to organise meeting-free days for yourself, and for t
 2. Reduce commitments.
 3. Start doing more tasks than are coming in.
 
-![Screenshot of hidden lists where I dumped accumulated tasks](https://cdn-images-1.medium.com/max/1600/1*iYqqMdrAGgyY6pwQgR0rkw.png)
+![Screenshot of hidden lists where I dumped accumulated tasks](/my-daily-planner/1*iYqqMdrAGgyY6pwQgR0rkw.png)
 *This year I got swamped couple of times, yeah*
 
 Then I hide all migrating tasks under a toggle — and deal with them in time left over from the reduced task flow. If something important or urgent ended up under the fold — they'll usually remind me. If not — ¯\\\_(ツ)\_/¯.
@@ -181,14 +181,14 @@ Then I hide all migrating tasks under a toggle — and deal with them in time le
 
 **Implicit buffers**: Telegram saved messages, browser tabs. Sometimes tasks are stored in places not meant for them — but convenient enough to use without thinking.
 
-![Screenshot of a browser with hellota tabs](https://cdn-images-1.medium.com/max/1600/1*3XrVwBGa_ZuPyLU6FVOikQ.png)
+![Screenshot of a browser with hellota tabs](/my-daily-planner/1*3XrVwBGa_ZuPyLU6FVOikQ.png)
 *Here are less than 40, but still I can't get the purpose I've opened each*
 
 Imagine 40 browser tabs: some with work tasks, others with reading materials, some with messages or emails to reply to, and here's something kinda useful but need to figure it out, oh and here you can pick up a gift. In theory it's fine: did the task — closed the tab. In practice you start constantly shuffling through them, and then a second browser window appears with its own tabs...
 
 To avoid this, I keep a basic minimum of tabs: password manager, Claude, Perplexity, email, Notion page with tasks. At the end of the day I close all the other tabs optionally converting them into tasks: what exactly needs to be done with this link — and group them.
 
-![Screenshot of Telegram saved messages from 2018](https://cdn-images-1.medium.com/max/1600/1*0yO-DkxMWYtGEyoDTEyiqg.png)
+![Screenshot of Telegram saved messages from 2018](/my-daily-planner/1*0yO-DkxMWYtGEyoDTEyiqg.png)
 *This annoying habit with saved messages has been with me since around 2016, but in summer 2018 with a light swipe I deleted the previous two years*
 
 Same with Telegram saved messages. You can quickly and conveniently write down anything there: a task, reminder, links, notes, ideas — and also throw in a screenshot, file or forward a post. Occasionally they become completely unmanageable. I still can't fully break myself of this habit, so once every couple weeks on a weekend I dig through all saved messages from the previous time.
@@ -230,7 +230,7 @@ I've heard some people keep daily planners [in Evernote](https://evernote.com/) 
 
 **Categorisation**. Any labels: tasks, subtasks or supertasks; work or personal life; health, self-development, projects, bureaucracy or anything else — doesn't help at all. The only thing this might help with: statistics, and if you want to heavily balance life by categories.
 
-![Pie chart with 2025 tasks distribution by categories](https://cdn-images-1.medium.com/max/1600/1*jHlKi9i2AADJemjjBRYf1g.png)
+![Pie chart with 2025 tasks distribution by categories](/my-daily-planner/1*jHlKi9i2AADJemjjBRYf1g.png)
 
 LLMs help with statistics. I fed Claude with an export of tasks for 2025, it calculated everything for me. Here's my top categories, if you're curious:
 

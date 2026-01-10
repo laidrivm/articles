@@ -685,7 +685,7 @@ I plan to move to Lisbon suburbs: somewhere like Cascais or Mafra. So I looked f
 
 I also looked for incubators whose business areas align with my startup categories. You can check them by clicking the incubator’s name in the search results.
 
-![](https://cdn-images-1.medium.com/max/1600/1*_aPATr339A7ZCOKx_xzc3A.png)
+![](/portuguese-startup-visa/1*_aPATr339A7ZCOKx_xzc3A.png)
 
 I picked 10 incubators for the first wave. And in two weeks I got only 1 approval (a week after) and 9 rejections. I bet that’s because I did not make any slides to attach to the applications. In the form it’s considered optional but it seems like it significantly influences the decision. Don’t repeat my mistake and create your slides before applying to incubators.
 
@@ -697,7 +697,7 @@ I also know folks who wrote to the incubators by email in advance. According to 
 
 I also had a call with one of the incubators, even though they immediately approved and issued a confirmation letter:
 
-![](https://cdn-images-1.medium.com/max/1600/1*uZekL2-sv1BnbuM1pqz3Xw.png)
+![](/portuguese-startup-visa/1*uZekL2-sv1BnbuM1pqz3Xw.png)
 
 During the call, the representative shared some info about their incubator and the program itself:
 
