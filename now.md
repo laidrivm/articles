@@ -1,12 +1,8 @@
 # What I’m doing now
 
-## Working as a Head of Engineering
+## Hiring
 
-Still hiring [a Vue front-end lead](https://mojam.co/careers/front-end-team-lead/), and [a senior PHP/Laravel back-end engineer](https://mojam.co/careers/senior-php-developer-2/). If you speak Russian and meet the criteria, please apply.
-
-## Moving to Portugal
-
-Got approved for the Portugal startup program I published [a guide on](https://laidrivm.com/portuguese-startup-visa). Second December we start a week long car trip to move from Belgrade to Sesimbra. Actually, the move and the related stuff have been taking most of my time and effort besides my job recently.
+I look for [a Vue front-end lead](https://mojam.co/careers/front-end-team-lead/), and [a senior PHP/Laravel back-end engineer](https://mojam.co/careers/senior-php-developer-2/). If you speak Russian and meet the criteria, please apply.
 
 ## Developing Mellon
 
@@ -14,15 +10,35 @@ It is a local-first password manager I submitted to the startup program. I [publ
 
 ## Learning Vue
 
-Before, I was familiar with React as a frontend tool mainly. Now I have a team writing Vue, and I'm playing the lead role until I hire someone. I stocked up on some stuff during the Black Friday sale. Now I'm planning to take [Vue School](https://vueschool.io/courses), [Mastering Pinia](https://masteringpinia.com/), [Mastering Nuxt](https://masteringnuxt.com/) and [Adam Wathan's Component Design](https://learn.adamwathan.com/advanced-vue/building-controlled-components) courses.
+Before, I was familiar with React as a frontend tool mainly. Now I have a team writing Vue, and I'm leading them until I hire someone. I stocked up on some stuff during the Black Friday sale. Now I'm planning to take [Vue School](https://vueschool.io/courses), [Mastering Pinia](https://masteringpinia.com/), [Mastering Nuxt](https://masteringnuxt.com/) and [Adam Wathan's Component Design](https://learn.adamwathan.com/advanced-vue/building-controlled-components) courses.
+
+## Learning English again
+
+Almost six months later, Ian and I meet again to tell each other some cool stories.
+
+## Moving again
+
+Luckily, this time it's inside Portugal. We're signing long term contract to rent a flat in another district. It's beatiful, but inside there's only a kitchen equipped. Plan to hang out in the nearest IKEA quite a lot in the next month.
 
 ## What I’m doing as usual
 
+### Working as a Head of Engineering
+
+Since august 2025 I've been working as a HoE at [Mojam](https://mojam.co/), building sites and apps for Counter-Strike 2 fans.
+
 ### Living a family life
 
-In January, Nastya and I got married. We spend a lot of time together, travel, and love each other. In February, a pineapple green-cheeked parakeet flew to us from the street. We kept him and named Zhablik. Now we can't imagine how we lived without this sweet little pie.
+A year ago Nastya and I got married in Georgia. Shortly after, a pineapple green-cheeked parakeet flew to us from the street. We kept him and named Zhablik. Now we can't imagine how we lived without this sweet little pie.
 
 ## What I've been doing previously
+
+### Buying a car
+
+After we moved, I bought my first electric vehicle: red KIA EV6, assembled in 2021. Spent a month choosing models for shortlist and looking for a relevant ad on mobile.de. That a month more — to process the deal, wait for delivery from Germany to Portygal and for all the papers to be issues. Now I'm damn happy driver!
+
+### Moving to Portugal
+
+Got approved for the Portugal startup program I published [a guide on](https://laidrivm.com/portuguese-startup-visa). Second December 25 we took a week long car trip to move from Belgrade to Sesimbra.
 
 ### Studying a DevSecOps course
 
@@ -40,7 +56,7 @@ I was learning from [the most famous studio](https://course.libolibo.me/podcast-
 
 Looking for a fully remote position or one with an office in Portugal. Seeking for CTO, Head of Engineering or Engineering Manager roles. Hands-on with the JS stack. Check [my LinkedIn post](https://www.linkedin.com/posts/vladimir-lazarev_portugal-croatia-remote-activity-7333039345244835841-sPya) for the details.
 
-## Studying a comics course
+### Studying a comics course
 
 My wife and I took [an offline comics course](https://woopwoopschool.com/comicscourse). As a result, [I published my first comics, RU](https://t.me/laidrivm_pub/626) — an adaptation of the investigation of istories.media about the connection between Telegram and the russian federal security service.
 
@@ -54,6 +70,6 @@ Although they are trying to cancel Vera for [her interview](https://www.youtube.
 
 ---
 
-Written in Belgrade, Serbia, where after the clock change it gets dark at 15:30, brilliant.
+Written in Sesimbra, Portugal, at a stormy weather time.
 
 Inspired by [Derek Sivers](https://sive.rs/nowff). [Other now pages](https://nownownow.com/).
