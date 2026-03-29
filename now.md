@@ -1,8 +1,24 @@
 # What I’m doing now
 
-## Hiring
+## Hiring more
 
-I look for [a Vue front-end lead](https://mojam.co/careers/front-end-team-lead/), and [a senior PHP/Laravel back-end engineer](https://mojam.co/careers/senior-php-developer-2/). If you speak Russian and meet the criteria, please apply.
+I look for:
+- [A lead full-stack engineer on Next.js and Nest.js](https://mojam.co/careers/lead-full-stack-developer/) to develop a wiki-like product. If you consider your level as senior or middle, please still apply — as I have this second slot yet unopened.
+- [Two senior Node.js dev]( https://mojam.co/careers/senior-nodejs-developer/) to develop CS2 market integrations.
+- [A delivery manager](https://mojam.co/careers/delivery-manager/) to help me set up processes across 3 to 10 product cross-functional teams.
+- [A product designer](https://mojam.co/careers/product-designer/) to create our web interfaces and set user experience.
+
+If you speak Russian and meet the criteria, please apply.
+
+## ~~Getting a residence permit~~ Suing AIMA, Portuguese immigration service
+
+They refused to even accept my residence permit initial application. Instead, they ordered me to leave the country within 20 days, claiming I was in it illegally. While I still have a valid visa, which is a sufficient basis for obtaining a residence permit. I had to find a lawyer and file an urgent lawsuit to challenge this.
+
+Portuguese bureaucracy is hell. For migrants, it's even worse. The classic "to get paper A, you need to get B, but to get B, you need to get A. No, we won't give you a refusal paper. That's our secret internal regulations. Yes, even though it contradicts our own website". I'm stunned people living in such a wonderful place do such terrible things. [More about this](https://onlyinportugal.com/).
+
+## Talking about fraud
+
+[Filmed for the OVD-Info's YouTube channel](https://www.youtube.com/watch?v=8S77jidaF1A). That's a Russian human rights project. I briefly discuss how fraud works today, the schemes and tools used, and how to protect yourself from it.
 
 ## Developing Mellon
 
@@ -11,14 +27,6 @@ It is a local-first password manager I submitted to the startup program. I [publ
 ## Learning Vue
 
 Before, I was familiar with React as a frontend tool mainly. Now I have a team writing Vue, and I'm leading them until I hire someone. I stocked up on some stuff during the Black Friday sale. Now I'm planning to take [Vue School](https://vueschool.io/courses), [Mastering Pinia](https://masteringpinia.com/), [Mastering Nuxt](https://masteringnuxt.com/) and [Adam Wathan's Component Design](https://learn.adamwathan.com/advanced-vue/building-controlled-components) courses.
-
-## Learning English again
-
-Almost six months later, Ian and I meet again to tell each other some cool stories.
-
-## Moving again
-
-Luckily, this time it's inside Portugal. We're signing long term contract to rent a flat in another district. It's beatiful, but inside there's only a kitchen equipped. Plan to hang out in the nearest IKEA quite a lot in the next month.
 
 ## What I’m doing as usual
 
@@ -30,7 +38,19 @@ Since august 2025 I've been working as a HoE at [Mojam](https://mojam.co/), buil
 
 A year ago Nastya and I got married in Georgia. Shortly after, a pineapple green-cheeked parakeet flew to us from the street. We kept him and named Zhablik. Now we can't imagine how we lived without this sweet little pie.
 
+### Learning English
+
+Thanks to [Ian](https://ianspringham.co.uk/).
+
 ## What I've been doing previously
+
+### Moving again
+
+Luckily, this time it's inside Portugal. We're signing long term contract to rent a flat in another district. It's beatiful, but inside there's only a kitchen equipped. Plan to hang out in the nearest IKEA quite a lot in the next month.
+
+### Hiring
+
+I look for [a Vue front-end lead](https://mojam.co/careers/front-end-team-lead/), and [a senior PHP/Laravel back-end engineer](https://mojam.co/careers/senior-php-developer-2/). If you speak Russian and meet the criteria, please apply.
 
 ### Buying a car
 
