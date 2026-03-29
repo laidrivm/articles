@@ -10,7 +10,7 @@ I look for:
 
 If you speak Russian and meet the criteria, please apply.
 
-## ~~Getting a residence permit~~ Suing AIMA, Portuguese immigration service
+## Suing Portuguese immigration service
 
 They refused to even accept my residence permit initial application. Instead, they ordered me to leave the country within 20 days, claiming I was in it illegally. While I still have a valid visa, which is a sufficient basis for obtaining a residence permit. I had to find a lawyer and file an urgent lawsuit to challenge this.
 
